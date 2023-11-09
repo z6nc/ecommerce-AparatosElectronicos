@@ -1,0 +1,38 @@
+
+.containerFrm h1 {
+    padding-top: 1em;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.containerFrm {
+    margin-top: 8%;
+    background-color: red;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.containerFrm form {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 1em;
+}
+
+
+form #user{
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+form #contraseña{
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 3px;
+}

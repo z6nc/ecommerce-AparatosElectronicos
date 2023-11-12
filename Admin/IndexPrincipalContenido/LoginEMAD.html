@@ -63,24 +63,22 @@
       <div class="Container">
         <div class="containerInfo1">
           <h4>Administrador</h4>
-          <img  id="miImagen"  src="../../imagenes/marioBros3.png" alt="" srcset="" />
-          <a href="../../LOGIN/loginAdmin.php"  > Press Start</a>
-        </div>
-        <div class="containerInfo2">
-          <h4>Empleado</h4>
           <img
-            src="../../imagenes/luigui2.png"
-        
+            id="miImagen"
+            src="../../imagenes/marioBros3.png"
             alt=""
             srcset=""
           />
-          <a href="../../LOGIN/loginAdmin.php"  > Press Start</a>
+          <a href="../../LOGIN/loginAdmin.php"> Press Start</a>
+        </div>
+        <div class="containerInfo2">
+          <h4>Empleado</h4>
+          <img src="../../imagenes/luigui2.png" alt="" srcset="" />
+          <a href="../../LOGIN/loginAdmin.php"> Press Start</a>
         </div>
       </div>
     </header>
     <!-- ------------------------------------------------------------------------------------------------------------------------ -->
-    
-
 
     <!--------------------------------------------------- indice - items para   ingresar---------------------------------------------------- -->
 
@@ -149,23 +147,21 @@
       }
       .containerInfo1 h4 {
         padding-top: 25px;
-        color:wheat;
-        
+        color: wheat;
       }
-      .containerInfo1 a{
+      .containerInfo1 a {
         color: white;
         background-color: rgb(139, 1, 1);
         border-radius: 10px;
         text-decoration: none;
         padding: 4px 10px;
-        
       }
-      .containerInfo1 a:hover{
+      .containerInfo1 a:hover {
         background-color: rgb(255, 0, 0);
         box-shadow: 1px 2px 10px white;
-        cursor: url('../../imagenes/cursosRetro1.png'), auto;
+        cursor: url("../../imagenes/cursosRetro1.png"), auto;
       }
-       
+
       .containerInfo2 {
         display: flex;
         flex-direction: column;
@@ -185,17 +181,15 @@
 
       .containerInfo2 img {
         width: 210px;
-        margin-top:24px ;
+        margin-top: 24px;
       }
-
 
       .containerInfo2 h4 {
         padding-top: 25px;
-        color:wheat;
+        color: wheat;
       }
 
-
-      .containerInfo2 a{
+      .containerInfo2 a {
         color: white;
         background-color: rgb(52, 139, 1);
         border-radius: 10px;
@@ -203,17 +197,14 @@
         padding: 4px 10px;
         margin-top: 43px;
         margin-bottom: 39px;
-        
       }
-      .containerInfo2 a:hover{
+      .containerInfo2 a:hover {
         background-color: rgb(30, 255, 0);
         box-shadow: 1px 2px 10px white;
-        cursor: url('../../imagenes/cursosRetro1.png'), auto;
+        cursor: url("../../imagenes/cursosRetro1.png"), auto;
       }
 
-
-
-      @media (max-width: 687px) {
+      @media (min-width: 190px) and (max-width: 912px) {
         .collapse #uno {
           padding-left: 0;
           text-align: center;
@@ -230,32 +221,67 @@
           padding: 14px 3px;
           text-shadow: 1px 2px 5px black;
         }
+        .Container {
+          margin: 0;
+          display: flex;
+         flex-direction: column; 
+          justify-content: center;
+        }
+        .containerInfo1 {
+        
+        margin: 28px 16px;
       }
 
-      @media (max-width: 687px) and (orientation: landscape) {
+      .containerInfo1 img {
+        width: 160px;
+      }
+      .containerInfo1 h4 {
+        padding-top: 25px;
+        font-size: 19px;
+        color: wheat;
+      }
+      .containerInfo1 a {
+        color: white;
+        background-color: rgb(139, 1, 1);
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 13px;
+        padding: 4px 10px;
+        margin-bottom: 28px;
+        margin-top: 18px;
       }
 
-      @media (min-width: 768px) and (max-width: 912px) {
-        .collapse #uno {
-          padding-left: 0;
-          text-align: center;
-          font-size: 22px;
-        }
-        .collapse #dos {
-          padding-left: 0;
-          text-align: center;
-          font-size: 22px;
-        }
-
-        .Titulo {
-          color: whitesmoke;
-          text-decoration: none;
-          font-size: 30px;
-          margin-left: 2px;
-          padding: 30px 4px;
-          text-shadow: 1px 2px 10px black;
-        }
+      .containerInfo2 {
+        
+        margin: 28px 16px;
       }
+
+      .containerInfo2 img {
+        width: 190px;
+        margin-top: 24px;
+      }
+
+      .containerInfo2 h4 {
+        padding-top: 25px;
+        font-size: 19px;
+        color: wheat;
+      }
+
+      .containerInfo2 a {
+        color: white;
+        background-color: rgb(52, 139, 1);
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 4px 10px;
+        margin-top: 43px;
+        margin-bottom: 39px;
+        font-size: 13px;
+      }
+
+
+      }
+
+      
 
       @media (min-width: 1024px) and (max-width: 1090px) {
         .collapse #uno {
@@ -269,8 +295,6 @@
       }
     </style>
 
-    
-    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

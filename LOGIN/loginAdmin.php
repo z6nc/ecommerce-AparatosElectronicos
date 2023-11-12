@@ -1,113 +1,174 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body >
 
-     <div  data-aos="flip-left"  class="containerFrm">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Login Administrador</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div  data-aos="zoom-in-up"  class="containerFrm">
+    <div class="contenedorInfo">
+
       <div class="tituloFrm">
-        <h1 class="text-center">Login <br> Administrador</h1>
+        <h1 class="text-center">SIGN UP</h1>
+        <p>Bienvenido Administrador</p>
         <hr style=" border: 1px solid black;">
       </div>
 
-    <form  class="cuerpo" action="../LOGIN/validar.php" method="post">
-      <div class="mb-3">
-        <label for="user" class="form-label">Usuario :</label>
-        <input type="text" class="form-control" id="user" name="usuario"   placeholder="Ingrese su usuario">
-        
-      </div>
-      <div class="mb-3">
-        <label for="contraseña" class="form-label">Contraseña :</label>
-        <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña">
-      </div>
-      
-      <div class="d-grid gap-2 col-12 col-md-6 mx-auto">
-      <button type="submit" class="btn btn-success">Ingresar Administrador</button>
-       </div>
-       <hr>
-      <p class="text-center" style=" font-style:italic;color:gray; font-size:15px;" >Si no puedes ingresar contacta a soporte tecnico 
-        <br>+51 934 234 131 
-      </p> 
-    </form>
+      <form class="cuerpo" action="../LOGIN/validar.php" method="post">
+        <div class="usu">
+          <label for="user" class="form-label">Usuario :</label>
+          <input type="text" class="form-control" id="user" name="usuario" placeholder="Ingrese su usuario">
+
+        </div>
+        <div class="contra">
+          <label for="contraseña" class="form-label">Contraseña :</label>
+          <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña">
+        </div>
+
+        <div class="boton">
+          <button type="submit">Ingresar Administrador</button>
+        </div>
+
+      </form>
+    </div>
+    <div class="contenedorR">
+       <img src="../imagenes/Fondo2.png" alt="" srcset="">
+    </div>
 
   </div>
 
   <style>
     body {
-      background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,1) 9%, rgba(162,164,167,1) 100%);
       margin: 0;
+     background-color: whitesmoke;
+      font-family: "Press Start 2P", cursive;
       box-sizing: border-box;
-      background-color: #e5e0df;
-      font-family: 'roboto', sans-serif;
-
 
     }
 
-    .containerFrm input {
-      letter-spacing: 2px;
-      box-shadow: 1px 1px 1px black;
 
-    }
-
-    .containerFrm label {
-      letter-spacing: 2px;
-      font-weight: 700;
-
-    }
-
-    .containerFrm button {
-      font-weight: 900;
-      letter-spacing: 2px;
-      box-shadow: 2px 2px 10px black;
-    }
-
-
-
-    .containerFrm h1 {
-      font-weight: 900;
-      letter-spacing: 2px;
-
-    }
 
     .containerFrm {
-      background-color: #fff9f5;
-      position: relative;
-      top: 130px;
       margin: 0;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      margin: 9px;
-      border-top-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      top: 62px;
-
-
+      display: grid;
+      grid-template-columns: 40% 60%;
+      margin-left: 70px;
+      margin-right: 70px;
+      margin-top: 60px;
+      box-shadow: 1px 2px 10px black;
+      height: 530px;
 
     }
 
-    @media(min-width:687px) {
-      .containerFrm {
-        position: relative;
-        top: 63px;
-        margin-left: 25%;
-        margin-right: 25%;
-        padding: 24px;
-      }
+    .contenedorInfo {
+      background-color: white;
+    }
 
+    .contenedorR {
+      background-color: #F45F00;
+    }
+
+
+
+    .tituloFrm h1 {
+      font-size: 25px;
+      font-weight: bold;
+      padding-top: 65px;
+
+    }
+
+    .tituloFrm p {
+      text-align: center;
+      font-size: 14px;
+      color: gray;
+      padding-top: 25px;
+    }
+
+    .cuerpo {
+
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 15px;
+    }
+
+    .cuerpo .usu {
+      padding-top: 9px;
+      font-size: 14px;
+    }
+
+    .cuerpo .contra {
+      padding-top: 25px;
+      font-size: 14px;
+    }
+
+    .cuerpo .boton {
+      padding-top: 65px;
+      margin-bottom: 4px;
+      text-align: center;
+
+    }
+
+    .boton button {
+      font-size: 11px;
+      background-color: #F45F00;
+      border: none;
+      box-shadow: 1px 2px 10px black;
+      padding: 8px 12px;
+      border-radius: 9px;
+      color: white;
+    }
+
+    .boton :hover {
+      background-color: orange;
+      box-shadow: 1px 2px 10px whitesmoke;
+    }
+
+    .contra ::placeholder {
+      font-size: 10px;
+    }
+
+    .contra input {
+      border: none;
+      font-size: 10px;
+      border-bottom: 2px solid black;
+    }
+
+    .usu ::placeholder {
+      font-size: 10px;
+    }
+
+    .usu input {
+      border: none;
+      font-size: 10px;
+      border-bottom: 2px solid black;
+    }
+
+    .contenedorR{
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -61,7 +61,7 @@
 
     <header>
       <div class="Container">
-        <div class="containerInfo1">
+        <div data-aos="fade-right" class="containerInfo1">
           <h4>Administrador</h4>
           <img
             id="miImagen"
@@ -71,7 +71,7 @@
           />
           <a href="../../LOGIN/loginAdmin.php"> Press Start</a>
         </div>
-        <div class="containerInfo2">
+        <div data-aos="fade-left" class="containerInfo2">
           <h4>Empleado</h4>
           <img src="../../imagenes/luigui2.png" alt="" srcset="" />
           <a href="../../LOGIN/loginEmpleado.php"> Press Start</a>
@@ -88,9 +88,10 @@
         box-sizing: border-box;
         font-family: "Press Start 2P", cursive;
         background-color: rgb(240, 237, 237);
+        cursor: url("../../imagenes/cursosRetro1.png"), auto;
       }
       .navbar {
-        background-color: rgb(250, 100, 45);
+        background-color: #F45F00;
         box-shadow: 1px 2px 10px rgb(201, 54, 0);
       }
       .Titulo {
@@ -136,7 +137,7 @@
           url("../../imagenes/fondoMario.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        box-shadow: 1px 2px 10px rgb(0, 0, 0);
+        box-shadow: 1px 2px 20px rgb(0, 0, 0);
         text-align: center;
         align-items: center;
         margin: 45px 130px;
@@ -173,7 +174,7 @@
           url("../../imagenes/fondoMario.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        box-shadow: 1px 2px 10px rgb(0, 0, 0);
+        box-shadow: 1px 2px 20px rgb(0, 0, 0);
         text-align: center;
         align-items: center;
         margin: 45px 130px;
@@ -294,7 +295,11 @@
         }
       }
     </style>
-
+     
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

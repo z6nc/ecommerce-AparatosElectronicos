@@ -13,7 +13,7 @@
 
 <body>
 
-  <div  data-aos="zoom-in-up"  class="containerFrm">
+  <div data-aos="zoom-in-up" class="containerFrm">
     <div class="contenedorInfo">
 
       <div class="tituloFrm">
@@ -40,7 +40,7 @@
       </form>
     </div>
     <div class="contenedorR">
-       <img src="../imagenes/Fondo2.png" alt="" srcset="">
+      <img src="../imagenes/Fondo2.png" alt="" srcset="">
     </div>
 
   </div>
@@ -48,10 +48,10 @@
   <style>
     body {
       margin: 0;
-     background-color: whitesmoke;
+      background-color: whitesmoke;
       font-family: "Press Start 2P", cursive;
       box-sizing: border-box;
-
+      cursor: url("../imagenes/cursosRetro1.png"), auto;
     }
 
 
@@ -62,8 +62,8 @@
       grid-template-columns: 40% 60%;
       margin-left: 70px;
       margin-right: 70px;
-      margin-top: 60px;
-      box-shadow: 1px 2px 10px black;
+      margin-top: 35px;
+      box-shadow: 1px 2px 30px black;
       height: 530px;
 
     }
@@ -130,6 +130,7 @@
     .boton :hover {
       background-color: orange;
       box-shadow: 1px 2px 10px whitesmoke;
+      cursor: url("../imagenes/cursosRetro1.png"), auto;
     }
 
     .contra ::placeholder {
@@ -152,10 +153,38 @@
       border-bottom: 2px solid black;
     }
 
-    .contenedorR{
+    .contenedorR {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+
+
+    @media (min-width: 190px) and (max-width: 912px) {
+
+      .containerFrm {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 35px;
+        margin-right: 30px;
+       
+      }
+
+      .contenedorInfo {
+      background-color: white;
+      margin-bottom: 43px;
+     
+      
+    }
+    .contenedorR img{
+      margin: 0;
+      width: 370px;
+      
+    }
     }
   </style>
 

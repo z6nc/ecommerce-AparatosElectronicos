@@ -40,7 +40,7 @@
       </form>
     </div>
     <div class="contenedorR">
-      <img src="../imagenes/Fondo2.png" alt="" srcset="">
+      <img src="../imagenes/imagenAdministrador.png" alt="" srcset="">
     </div>
 
   </div>
@@ -73,7 +73,7 @@
     }
 
     .contenedorR {
-      background-color: #F45F00;
+      background-color: red;
     }
 
 
@@ -119,7 +119,7 @@
 
     .boton button {
       font-size: 11px;
-      background-color: #F45F00;
+      background-color: rgb(139, 1, 1);
       border: none;
       box-shadow: 1px 2px 10px black;
       padding: 8px 12px;
@@ -128,7 +128,7 @@
     }
 
     .boton :hover {
-      background-color: orange;
+      background-color: rgb(255, 0, 0);
       box-shadow: 1px 2px 10px whitesmoke;
       cursor: url("../imagenes/cursosRetro1.png"), auto;
     }

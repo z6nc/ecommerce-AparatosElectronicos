@@ -17,7 +17,7 @@
     <div class="contenedorInfo">
 
       <div class="tituloFrm">
-        <h1 class="text-center">SIGN UP</h1>
+        <h1 class="text-center">LOGIN IN</h1>
         <p>Bienvenido Administrador</p>
         <hr style=" border: 1px solid black;">
       </div>

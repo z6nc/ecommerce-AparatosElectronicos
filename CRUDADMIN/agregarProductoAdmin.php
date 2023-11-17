@@ -4,50 +4,63 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Agregar Productos</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-                                   <!-- el diseño esta hecho con boostrap  --> 
-                                 <!-- el styleLista.css es solo para el banner --> 
-                                   
-  <body style="background-color:#EAE6CA;">
-    <!-- Configuración del navbar user y lista -->
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+                                  
+                                   
+  <body >
+    <!-- Configuración del navbar user y lista -->
     <nav class="navbar navbar-expand-lg ">
-      <div class="container-fluid">
-      <a class="navbar-brand" href="../Admin/indiceAdmin.html"> <img src="../imagenes/logo2.png" class=" " alt="..."  height="70px" style="border-radius: 12px;"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="btn btn-outline-light " href="../Admin/indiceAdmin.html">Inicio <i class="fas fa-home"></i></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Admin/listarProductoAdmin.php">Producto <i class="fas fa-shopping-bag"></i> </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Proveedor/listarProveedor.html">Proveedor  <i class="fas fa-truck"></i> </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Admin/listarEmpleado.php">Empleado <i class="fas fa-user-shield"></i></a>
-                  </li>
-              </ul>
-          </div>
+    <div class="container-fluid">
+      <a class="navbar-brand" id="titulo" href="../Admin/indiceAdmin.html">ElectroTECHZONE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="../Admin/indiceAdmin.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/listarProductoAdmin.php" style="padding-left: 22px;">Producto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/listarEmpleado.php" style="padding-left: 22px;">Empleado</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="padding-left: 22px;" href="../Proveedor/listarProveedor.html"
+              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Proveedor
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#" style="color: black;">1-proveedor</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;">2-compra</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;">3-pagos</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;">4-factura</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/indexPrincipal.html">cerrar sesion</a>
+          </li>
+        </ul>
       </div>
+    </div>
   </nav>
-   
       
  <!-- Formulario de agregar Productos -->
-     <br>
-    <div class="container " >
-        <h1 class="text-center"style=" background-color:black;color:white;">Agregar productos</h1>
-    <form style=" margin-left:3em;margin-right:3em;" action="../CRUDADMIN/insertarProductoAdmin.php" method="POST" enctype="multipart/form-data" >
-      
-    <label for=""  style="margin-left:1em;font-size:20px;letter-spacing:2px;"  >Factura Proveedor :</label>
-    <select class="form-select mb-3 " style="background-color:#EAE6CA;border-color:black;"   name="nombreFactura">
+    
+    <div class="containerPrincipal">
+        <h1 class="text-center">Agregar productos</h1>
+        
+    <form  action="../CRUDADMIN/insertarProductoAdmin.php" method="POST" enctype="multipart/form-data" >
+    <label for="" >Factura Proveedor :</label>
+    <select class="form-select mb-3 "    name="nombreFactura">
         <option     selected disabled>-- Selecciona el nombre del articulo comprado --</option>
         <?php
          include ("../config/conexion.php");
@@ -59,58 +72,58 @@
         ?>
     </select>  
 
-        <div class="mb-3"  style="margin-left:3em;margin-right:3em;">
-            <label class="form-label"  style="margin-left:1em;font-size:20px;"  >Nombre Producto : </label>
-            <input type="text" class="form-control" style="background-color:#EAE6CA;border-color:black;" minLength="4" maxlength="25"  name="nombreP" required>
+        <div class="mb-3">
+            <label class="form-label"   >Nombre Producto : </label>
+            <input type="text" class="form-control"  minLength="4" maxlength="25"  name="nombreP" required>
             
         </div>   
-        <div class="mb-3" style="margin-left:3em;margin-right:3em;">
-            <label class="form-label" style="margin-left:1em;font-size:20px;"  >Descripcion : </label>
-            <input type="text" class="form-control"  style="background-color:#EAE6CA;border-color:black;" minLength="4" maxlength="80" name="descripcionP" required>
+        <div class="mb-3" >
+            <label class="form-label"   >Descripcion : </label>
+            <input type="text" class="form-control"   minLength="4" maxlength="80" name="descripcionP" required>
             
         </div>
-        <div class="mb-3" style="margin-left:3em;margin-right:3em;">
-            <label class="form-label" style="margin-left:1em;font-size:20px;"  >Precio : </label>
-            <input type="text" class="form-control" style="background-color:#EAE6CA;border-color:black;" minLength="2"  name="precioP" required>
+        <div class="mb-3" >
+            <label class="form-label"   >Precio : </label>
+            <input type="text" class="form-control"  minLength="2"  name="precioP" required>
             
         </div>
-        <div class="mb-3" style="margin-left:3em;margin-right:3em;">
-            <label class="form-label" style="margin-left:1em;font-size:20px;" >Stock : </label>
-            <input type="text" class="form-control"  style="background-color:#EAE6CA;border-color:black;" maxlength="100"   name="stockP" required>
+        <div class="mb-3" >
+            <label class="form-label"  >Stock : </label>
+            <input type="text" class="form-control"   maxlength="100"   name="stockP" required>
             
         </div> 
-        <div class="mb-3" style="margin-left:3em;margin-right:3em;">
-            <label class="form-label"style="margin-left:1em;font-style:italic;font-size:20px;">Marca  : </label>
-            <input type="text" class="form-control" name="marcaP"  style="background-color:#EAE6CA;border-color:black;" minLength="2" maxlength="20" required>
+        <div class="mb-3" >
+            <label class="form-label">Marca  : </label>
+            <input type="text" class="form-control" name="marcaP"   minLength="2" maxlength="20" required>
             
         </div> 
-        <div class="mb-3" style="margin-left:3em;margin-right:3em;">
-            <label class="form-label"style="margin-left:1em;font-size:20px;">Pagina Principal  : </label>
-            <input type="text" class="form-control" name="paginaPrin"  style="background-color:#EAE6CA;border-color:black;" minLength="2" maxlength="2"   placeholder=" Si / No" required>
+        <div class="mb-3" >
+            <label class="form-label">Pagina Principal  : </label>
+            <input type="text" class="form-control" name="paginaPrin"   minLength="2" maxlength="2"   placeholder=" Si / No" required>
             
         </div> 
         <!-- en este apartado se agrega la imagen de los productos   -->
-        <div class="mb-3" style="margin-left:3em;margin-right:3em;">
-            <label for="imagen" class="form-label" style="margin-left:1em;font-size:20px;"> Imagen del producto :</label>
-            <input type="file" name="imagenP" id="imagen"  style="background-color:#EAE6CA;border-color:black;"  class="form-control" required>
+        <div class="mb-3">
+            <label for="imagen" class="form-label" > Imagen del producto :</label>
+            <input type="file" name="imagenP" id="imagen"    class="form-control" required>
         </div>
-        <div class="mb-3" style="margin-left:3em;margin-right:3em;">
-            <label for="imagen" class="form-label" style="margin-left:1em;font-size:20px;"> Imagen del producto 2 :</label>
-            <input type="file" name="imagenP2" id="imagen"  style="background-color:#EAE6CA;border-color:black;"  class="form-control">
+        <div class="mb-3" >
+            <label for="imagen" class="form-label" > Imagen del producto 2 :</label>
+            <input type="file" name="imagenP2" id="imagen"    class="form-control">
         </div>  
-        <div class="mb-3" style="margin-left:3em;margin-right:3em;">
-            <label for="imagen" class="form-label" style="margin-left:1em;font-size:20px;"> Imagen del producto 3:</label>
-            <input type="file" name="imagenP3" id="imagen"  style="background-color:#EAE6CA;border-color:black;"  class="form-control">
+        <div class="mb-3" >
+            <label for="imagen" class="form-label" > Imagen del producto 3:</label>
+            <input type="file" name="imagenP3" id="imagen"    class="form-control">
         </div>
-        <div class="mb-3" style="margin-left:3em;margin-right:3em;">
-            <label for="imagen" class="form-label" style="margin-left:1em;font-size:20px;"> Imagen del producto 4 :</label>
-            <input type="file" name="imagenP4" id="imagen"  style="background-color:#EAE6CA;border-color:black;"  class="form-control">
+        <div class="mb-3" >
+            <label for="imagen" class="form-label" > Imagen del producto 4 :</label>
+            <input type="file" name="imagenP4" id="imagen"    class="form-control">
         </div>
      
         <!-- este boton agregar sirve apra agregar  a la base de datos   -->
         <!-- este boton volver te redirecciona a la lista de productos , por ello dice
          listaproductos.php  -->
-        <div class="text-center" style="margin-bottom:1em;">
+        <div class="text-center" >
             <button type="submit" class="btn btn-danger"    >Agregar <i class="fas fa-plus"></i></button>
             <a href="../Admin/listarProductoAdmin.php" class="btn btn-dark">Volver <i class="fas fa-arrow-left"></i></a>
         </div>   
@@ -153,40 +166,80 @@
 
     
    <style>
-    .container{
-        background-color:lightgray;
-        border: 1px solid black;
-        
-    }
-    .container h1{
-     
-      padding-top:10px;
-      padding-bottom:12px;
-    }
-    body{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    nav {
-   background-color: #0d47a1;
-   }
-   nav div {
-   
-   margin-left: 2em;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   }     
-   nav .btn {
-   border: none;
+      body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+      background-color: white;
+      padding: 0;
     }
 
-    .container .mb-3{
-        margin-left:"10px;"
+    nav {
+      background-color: #dc582a;
+
+    }
+
+    .container-fluid a {
+      color: white;
+      font-size: 17px;
+      padding: 10px 9px;
+      font-weight: 300;
+
+    }
+
+    .container-fluid #titulo {
+      font-weight: bold;
+      font-size: 23px;
+      padding-right: 55px;
+    }
+
+    .collapse ul {
+      padding-left: 90px;
+      letter-spacing: 1px;
+    }
+
+    .collapse .dropdown-menu {
+      color: black;
+    }
+
+
+    .containerPrincipal{
+     display: flex;
+     flex-direction: column;
+      gap: 30px;
+     align-items: center;
+     justify-content: center;
+     border: 1px solid black;
+     width: 45%;
+     margin-top: 20px;
+     margin-left: 30%;
+    }
+
+    .containerPrincipal h1{
+        font-weight: 900;
+        font-size: 33px;
+        color: black;
+        margin-top: 38px;
+       
+    }
+    .containerPrincipal form{
+        background-color: red;
+        padding: 10px 73px;
     }
    </style>
 
 
 
      <!-- esto son script de boostrap  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+    <!-- Incluir Bootstrap JS y jQuery (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
 </body>
 </html>

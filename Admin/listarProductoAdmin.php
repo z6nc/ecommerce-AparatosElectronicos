@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    
 </head>
@@ -18,28 +18,41 @@
 
     <!-- Configuración del navbar user y lista -->
     <nav class="navbar navbar-expand-lg ">
-      <div class="container-fluid">
-      <a class="navbar-brand" href="../Admin/indiceAdmin.html"> <img src="../imagenes/logo2.png" class=" " alt="..."  height="70px" style="border-radius: 12px;"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="btn btn-outline-light " href="../Admin/indiceAdmin.html">Inicio <i class="fas fa-home"></i></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Admin/listarProductoAdmin.php">Producto <i class="fas fa-shopping-bag"></i> </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Proveedor/listarProveedor.html">Proveedor  <i class="fas fa-truck"></i> </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Admin/listarEmpleado.php">empleado <i class="fas fa-user-shield"></i></a>
-                  </li>
-              </ul>
-          </div>
+    <div class="container-fluid">
+      <a class="navbar-brand" id="titulo" href="../Admin/indiceAdmin.html">ElectroTECHZONE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="../Admin/indiceAdmin.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/listarProductoAdmin.php" style="padding-left: 22px;">Producto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/listarEmpleado.php" style="padding-left: 22px;">Empleado</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="padding-left: 22px;" href="../Proveedor/listarProveedor.html"
+              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Proveedor
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#" style="color: black;">1-proveedor</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;">2-compra</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;">3-pagos</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;">4-factura</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/indexPrincipal.html">cerrar sesion</a>
+          </li>
+        </ul>
       </div>
+    </div>
   </nav>
    
  
@@ -47,19 +60,19 @@
   
     <!-- Tabla de  lista de  producto  titulo -->
     <br>
-    <div class="containerT">
-      <h1 class="text-center" style="  padding-top: 12px;"> Lista de productos</h1>
+    <section >
+   
+      <h1 class="text-center" > Lista de productos</h1>
+
+      <div class="contenedor" >
+            <a href="../CRUDADMIN/agregarProductoAdmin.php"class="btn btn-success  text-center " >Agregar Compra  <i class="fas fa-plus"></i></a>
     </div>
 
     <!-- Tabla de lista de productos  -->
-    
-    
-
-
     <table class="table  table-hover "  >
-  <thead >
+  <thead class="table-dark" >
     <tr>
-      <th scope="col">ID</th>
+      <th  scope="col">ID</th>
       <th scope="col">FACTURA PROVEEDOR</th>
       <th scope="col">NOMBRE DEL PRODUCTO</th>
       <th scope="col">DESCRIPCION</th>
@@ -113,16 +126,16 @@ if ($sql) {
         echo "<td> S/  $precio</td>";
         echo "<td>$stock</td>";
         echo "<td>$marca</td>";
-        echo "<td><img  style='width: 120px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen) . "'></td>";
-        echo "<td><img  style='width: 120px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen2) . "'></td>";
-        echo "<td><img  style='width: 120px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen3) . "'></td>";
-        echo "<td><img  style='width: 120px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen4) . "'></td>";
+        echo "<td><img  style='width: 100px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen) . "'></td>";
+        echo "<td><img  style='width: 100px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen2) . "'></td>";
+        echo "<td><img  style='width: 100px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen3) . "'></td>";
+        echo "<td><img  style='width: 100px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen4) . "'></td>";
         echo "<td>$paginaPrin</td>";
         echo "<td>
         <a href='Formulario/editar.php?id=$idProducto' class=\"btn btn-warning\"><i class='fas fa-edit'></i></a>
         <br>
         <br>
-        <a href='../CRUDADMIN/eliminarProductoAdmin.php?ID_PRODUCTO=$idProducto'class=\"btn btn-danger\"><i class='fas fa-trash'></a>
+        <a href='../CRUDADMIN/eliminarProductoAdmin.php?ID_PRODUCTO=$idProducto'class=\"btn btn-danger\">X</a>
       </td>";
        echo "</tr>";
     }
@@ -136,12 +149,11 @@ $conexion->close();
 ?>
 
   </tbody>
-  <div class="contenedor " >
-            <a href="../CRUDADMIN/agregarProductoAdmin.php"class="btn btn-success  text-center  " style=" background-color:green">Agregar Compra  <i class="fas fa-plus"></i></a>
-    </div>
+  
 
   </table>
-    
+
+  </section>
 
 
     
@@ -149,52 +161,68 @@ $conexion->close();
 
 
   <style>
-    table{
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      background-color:#EAE6CA;
+   body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+      background-color: white;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #dc582a;
+
+    }
+
+    .container-fluid a {
+      color: white;
+      font-size: 17px;
+      padding: 10px 9px;
+      font-weight: 300;
+
+    }
+
+    .container-fluid #titulo {
+      font-weight: bold;
+      font-size: 23px;
+      padding-right: 55px;
+    }
+
+    .collapse ul {
+      padding-left: 90px;
+      letter-spacing: 1px;
+    }
+
+    .collapse .dropdown-menu {
+      color: black;
+    }
+
+    section{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      
+    }
+    section h1{
+      font-weight: 900;
+      color: black;
+      font-size: 35px;
+      margin-top: 30px;
+     }
+      
+     section table{
+      margin: 0;
+      margin-top: 25px;
       font-size: 12px;
-      text-align:center;
-      margin:auto;
-    }
-
-
-    .contenedor{
-    margin-left:85%;
-    margin-bottom:1em;
-   }
-    body{
-      color:black;
-      background-color:#EAE6CA;
-    }
-    .containerT{
-      margin-top:1em;
-      margin-bottom:1em;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    table th{
-      background-color:#0d47a1;
-      color:white;
-    }
-    table td{
-      background-color:#EAE6CA;
-    }
-
-   nav {
-   background-color: darkgoldenrod;
-   }
-   nav div {
-   margin-left: 2em;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   }     
-   nav .btn {
-   border: none;
-    }
-
-    #columna{
-    margin-top: 5em;
-    margin-left: 10em;;
-    }
-       
+    
+    
+     }
+     section .contenedor{
+      font-weight: 900;
+      margin-left: 75%;
+      margin-top: 40px;
+     }
+     
   </style>
 
 
@@ -210,8 +238,8 @@ $conexion->close();
   </script>
 
     <!-- Incluir Bootstrap JS y jQuery (opcional) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 </html>

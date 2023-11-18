@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Agregar Productos</title>
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -120,16 +119,15 @@
             <input type="file" name="imagenP4" id="imagen"    class="form-control">
         </div>
      
-        <!-- este boton agregar sirve apra agregar  a la base de datos   -->
-        <!-- este boton volver te redirecciona a la lista de productos , por ello dice
-         listaproductos.php  -->
-        <div class="text-center" >
+    
+        <div class="botones" >
             <button type="submit" class="btn btn-danger"    >Agregar <i class="fas fa-plus"></i></button>
             <a href="../Admin/listarProductoAdmin.php" class="btn btn-dark">Volver <i class="fas fa-arrow-left"></i></a>
         </div>   
       
     </form>
     </div>
+
 <!-- Scrip para los datos precio y stock que solo sea numeros  -->
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -170,7 +168,7 @@
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       box-sizing: border-box;
-      background-color: white;
+      background-color: whitesmoke;
       padding: 0;
     }
 
@@ -205,14 +203,16 @@
 
     .containerPrincipal{
      display: flex;
+     background-color: white;
      flex-direction: column;
       gap: 30px;
      align-items: center;
      justify-content: center;
-     border: 1px solid black;
      width: 45%;
      margin-top: 20px;
      margin-left: 30%;
+     box-shadow: 1px 2px 10px black;
+     margin-bottom: 30px;
     }
 
     .containerPrincipal h1{
@@ -223,8 +223,25 @@
        
     }
     .containerPrincipal form{
-        background-color: red;
         padding: 10px 73px;
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    form .botones{
+       display: grid;
+       grid-template-columns: 50% 50%;
+       gap: 9px;
+    }
+    .botones button{
+       font-weight: 900;
+       box-shadow: 1px 2px 10px black;
+       letter-spacing: 2px;
+    }
+    .botones a{
+        font-weight: 900;
+       box-shadow: 1px 2px 10px black;
+       letter-spacing: 2px;  
     }
    </style>
 

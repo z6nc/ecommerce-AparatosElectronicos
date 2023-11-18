@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    
 </head>
     <title>Lista Proveedores</title>
@@ -18,175 +16,218 @@
 
     <!-- Configuración del navbar user y lista -->
     <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-        <a class="navbar-brand" href="../Admin/indiceAdmin.html"> <img src="../imagenes/logo2.png" class=" " alt="..."  height="70px" style="border-radius: 12px;"></a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light " href="../Admin/indiceAdmin.html">Inicio <i class="fas fa-home"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Admin/listarProductoAdmin.php">Producto <i class="fas fa-shopping-bag"></i> </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Proveedor/listarProveedor.html">Proveedor  <i class="fas fa-truck"></i> </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Admin/listarEmpleado.php">Empleado <i class="fas fa-user-shield"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class="container-fluid">
+      <a class="navbar-brand" id="titulo" href="../Admin/indiceAdmin.html">ElectroTECHZONE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="../Admin/indiceAdmin.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/listarProductoAdmin.php" style="padding-left: 22px;">Producto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/listarEmpleado.php" style="padding-left: 22px;">Empleado</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="padding-left: 22px;" href="../Proveedor/listarProveedor.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Proveedor
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#" style="color: black;">1-proveedor</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;">2-compra</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;">3-pagos</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;">4-factura</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/indexPrincipal.html">cerrar sesion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
    
  
 
-  
-    <!-- Tabla de  lista de  producto  titulo -->
-    <br>
-    
-
     <!-- Tabla de lista de productos  -->
     
-    <div class="container">
-        <h1 class="text-center">Buscar Proveedor por ID</h1>
-        <form action="../CRUDADMIN/busquedaEmpleado.php" method="POST" class="mb-4">
-        <a style="margin-right:20px" >Buscar por:</a>
-
-        <select class="CODIGO" name="CODIGO" id="" style="margin-right:10px">
-        <option value="Todos">Código</option>
+    <div class="containerTotal">
+     <div class="container">
+      <h1 class="text-center">Empleado</h1>
+      <p>Buscar Empleado por ID</p>
+      <form action="../CRUDADMIN/busquedaEmpleado.php" method="POST" >
+        <a >Buscar por:</a>
+        <select class="CODIGO" name="CODIGO" id="" >
+          <option value="Todos">Código</option>
         </select>
-        <input type="text" name="buscar" id="" style="margin-right:10px;border-color:black;">
-        <input type="submit"  class="btn btn-primary "  value="Buscar">
-        <a href="../Admin/listarEmpleado.php"class="btn btn-primary  text-center   "> Mostrar Todo </a>
-        </form>
+        <input type="text" name="buscar" id="" >
+        <input type="submit" class="btn btn-primary"  style="font-weight: 900;"  value="Buscar">
+        <a href="../Admin/listarEmpleado.php" class="btn btn-primary " style="font-weight: 900;"> Mostrar Todo </a>
+      </form>
+      <a href="../CRUDADMIN/agregarEmple.php" class="boton" >Agregar Empleado <i class="fas fa-plus"></i></a>
+     </div>
 
    
 
 
 
-    <table class="table table-bordered table-hover  "  style="background-color:lightgray ; text-align:justify; ">
-    <div class="container">
-      <h1 class="text-center" >Empleado</h1>
-    </div>
-    <thead class="text-center"  style="background-color:green; color:white;">
-    <tr>
+     <table class="table  table-hover  " >
+        <thead class="table-dark"  >
+        <tr>
       <th scope="col">ID </th>
       <th scope="col">DNI</th>
       <th scope="col">NOMBRE  </th>
       <th scope="col">USUARIO </th>
       <th scope="col">CONTRASEÑA  </th>
       <th scope="col">ACCIONES </th>
+      </tr>
+      </thead>
 
-    </tr>
-  </thead>
-
-  <tbody   class="text-center" >
+       <tbody   class="text-center" >
 
 
-  <?php
-  //  conexion para mostrar los productos
- require("../config/conexion.php");
- $buscar = $_POST['buscar'];
+        <?php
+        //  conexion para mostrar los productos
+        require("../config/conexion.php");
+        $buscar = $_POST['buscar'];
 
- $sql = $conexion->query("SELECT empleado.ID_EMPLEADO ,  empleado.DNI,empleado.NOMBRE ,empleado.USUARIO, empleado.CONTRASEÑA  
- FROM empleado  WHERE ID_EMPLEADO LIKE '$buscar' '%'   ");
+        $sql = $conexion->query("SELECT empleado.ID_EMPLEADO ,  empleado.DNI,empleado.NOMBRE ,empleado.USUARIO, empleado.CONTRASEÑA  
+        FROM empleado  WHERE ID_EMPLEADO LIKE '$buscar' '%'   ");
 
-if ($sql) {
-    while ($resultado = $sql->fetch_assoc()) {
+        if ($sql) {
+            while ($resultado = $sql->fetch_assoc()) {
 
-        $idEmple = $resultado['ID_EMPLEADO'];
-        $dni = $resultado['DNI'];
-        $Nombre = $resultado['NOMBRE'];
-        $usuario = $resultado['USUARIO'];
-        $contraseña = $resultado['CONTRASEÑA'];
-       
-    
-        
-    
-        // Imprime las filas de la tabla con las columnas específicas
-        echo "<tr  data-aos=\"zoom-in-up\"  >";
-        echo "<th scope='row'>$idEmple</th>";
-        echo "<td>$dni</td>";
-        echo "<td>$Nombre</td>";
-        echo "<td>$usuario</td>";
-        echo "<td>$contraseña</td>";
-        echo "<td>
-        <a href='Formulario/editar.php?id=$idEmple' class=\"btn btn-warning  custom-link \"><i class='fas fa-edit'></i></a>
-        <br>
-        <br>
-        <a href='../CRUDADMIN/eliminarEmpleado.php?ID_EMPLEADO=$idEmple'class=\"btn btn-danger custom-link\"><i class='fas fa-trash'></i></a>
-      </td>";
-       echo "</tr>";
-    }
-} else {
-    // Maneja el error si la consulta no se ejecuta correctamente
-    echo "Error en la consulta: " . $conexion->error;
-}
+                $idEmple = $resultado['ID_EMPLEADO'];
+                $dni = $resultado['DNI'];
+                $Nombre = $resultado['NOMBRE'];
+                $usuario = $resultado['USUARIO'];
+                $contraseña = $resultado['CONTRASEÑA'];
+            
+            
+                
+            
+                // Imprime las filas de la tabla con las columnas específicas
+                echo "<tr  data-aos=\"zoom-in-up\"  >";
+                echo "<th scope='row'>$idEmple</th>";
+                echo "<td>$dni</td>";
+                echo "<td>$Nombre</td>";
+                echo "<td>$usuario</td>";
+                echo "<td>$contraseña</td>";
+                echo "<td>
+                <a href='Formulario/editar.php?id=$idEmple' class=\"btn btn-warning  custom-link \"><i class='fas fa-edit'></i></a>
+                <br>
+                <br>
+                <a href='../CRUDADMIN/eliminarEmpleado.php?ID_EMPLEADO=$idEmple'class=\"btn btn-danger custom-link\"><i class='fas fa-trash'></i></a>
+            </td>";
+            echo "</tr>";
+            }
+        } else {
+            // Maneja el error si la consulta no se ejecuta correctamente
+            echo "Error en la consulta: " . $conexion->error;
+        }
 
-// Cierra la conexión a la base de datos cuando hayas terminado
-$conexion->close();
-?>
+        // Cierra la conexión a la base de datos cuando hayas terminado
+        $conexion->close();
+        ?>
 
-        </tbody>
-        <div class="contenedor " >
-            <a href="../CRUDADMIN/agregarEmple.php"class="btn btn-success  text-center  " style=" background-color:green">Agregar Empleado <i class="fas fa-plus"></i></a>
-            </div>
-    </table>
-    
-    </div>
+                </tbody>
+                
+            </table>
+</div>
 
 
 
   <style>
-  table th{
-    background-color:#D53507;
-    color:white;
-  }
-   td .custom-link{
-            width:98px;
-            height:38px;
-        }
-
-   body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   background-color:#EAE6CA;
-}
-   .contenedor{
-            margin-left:85%;
-            margin-bottom:1em;
-        }
-
-    .container h1{
-     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-     
-     color:black; 
-     height: 80px; 
-     padding-top: 12px;
+ body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+      background-color: white;
+      padding: 0;
     }
 
-  th a{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    letter-spacing: 2px;
-     
- }
+    nav {
+      background-color: #dc582a;
 
-        nav {
-         background-color:darkgoldenrod;
-       }
+    }
+
+    .container-fluid a {
+      color: white;
+      font-size: 17px;
+      padding: 10px 9px;
+      font-weight: 300;
+
+    }
+
+    .container-fluid #titulo {
+      font-weight: bold;
+      font-size: 23px;
+      padding-right: 55px;
+    }
+
+    .collapse ul {
+      padding-left: 90px;
+      letter-spacing: 1px;
+    }
+
+    .collapse .dropdown-menu {
+      color: black;
+    }
+    .containerTotal{
+     display: grid;
+     grid-template-columns: 48% 52%;
+     justify-content: center;
+     align-items: center;
+    }
+    .containerTotal .container{
+     max-width: 100%;
+     height: 550px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin-bottom: 60px;
+     background-color: whitesmoke;
       
+    }
+    .container h1{
+      font-weight: 900;
+      margin-bottom: 40px;
+     letter-spacing: 2px;
+     font-size: 37px;
+    }
+    .container p{
+     margin-bottom: 20px;
+     padding-left: 10px;
+      font-size: 16px;
+    }
+    .container form{
+      margin-bottom: 80px; 
+      padding-left: 10px;
+      font-size: 16px;
 
-       nav div {
-            margin-left: 2em;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-
-        }
-        /* para quitar los bordes de boton */
-        nav .btn {
-            border: none;
-        }
-       
+    }
+    .container .boton{
+      margin: 2px 10px;
+      background-color: #008F39;
+      text-align: center;
+      margin-left: 200px;
+      margin-right: 200px;
+      padding: 9px 0px;
+      border-radius: 9px;
+      text-decoration: none;
+      color: white;
+      font-weight: 900;
+    }
+    .container .boton:hover{
+      background-color: #5cb85c;
+    }
+    .containerTotal table{
+        margin-block-end: auto;
+    }
   </style>
 
 
@@ -196,14 +237,12 @@ $conexion->close();
     
     
     
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
 
-    <!-- Incluir Bootstrap JS y jQuery (opcional) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Incluir Bootstrap JS y jQuery (opcional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

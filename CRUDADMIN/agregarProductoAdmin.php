@@ -14,7 +14,7 @@
                                    
   <body >
     <!-- Configuración del navbar user y lista -->
-    <nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
       <a class="navbar-brand" id="titulo" href="../Admin/indiceAdmin.html">ElectroTECHZONE</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"

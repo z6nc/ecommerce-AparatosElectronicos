@@ -4,40 +4,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Administrador indice</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Proveedor </title>
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
 </head>
 
-<body style="  background-color:whitesmoke;">
+<body >
 
   <!------------------------------------------------------------------------------ banner----------------------- -->
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../Admin/indiceAdmin.html"> <img src="../imagenes/logo2.png" class=" " alt="..."  height="70px" style="border-radius: 12px;"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="btn btn-outline-light " href="../Admin/indiceAdmin.html">Inicio <i class="fas fa-home"></i></a>
-                </li>
-                <li class="nav-item">
-                  <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Admin/listarProductoAdmin.php">Producto <i class="fas fa-shopping-bag"></i> </a>
-              </li>
-                <li class="nav-item">
-                    <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Proveedor/listarProveedor.html">Proveedor  <i class="fas fa-truck"></i> </a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-outline-light" style="margin-left: 10px;" href="../Admin/listarEmpleado.php">Empleado <i class="fas fa-user-shield"></i></a>
-                </li>
+      <a class="navbar-brand" id="titulo" href="../Admin/indiceAdmin.html">ElectroTECHZONE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="../Admin/indiceAdmin.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/listarProductoAdmin.php" style="padding-left: 22px;">Producto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/listarEmpleado.php" style="padding-left: 22px;">Empleado</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="padding-left: 22px;" href="../Proveedor/listarProveedor.html"
+              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Proveedor
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+             <li><a class="dropdown-item" href="../Proveedor/listarProveedor.html" style="color: black; text-align:center;">Principal</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;text-align:center;">Proveedor</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;text-align:center;">Compra</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;text-align:center;">Pagos</a></li>
+              <li><a class="dropdown-item" href="#" style="color: black;text-align:center;">Factura</a></li>
             </ul>
-        </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Admin/indexPrincipal.html">cerrar sesion</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
   <!------------------------------------------------------------------------------------------------------------------------  -->
 
   <figure class="text-center">
@@ -52,170 +67,103 @@
 
 
   <!-- ---------------------------------items de proveedor - pasos a seguir ---------------------------------->
-  <div class="container text-center" id="contenedor" style="font-family: 'Times New Roman', Times, serif;">
-    <div class="row row-cols-2">
-      <div class="col-md-6">
-        <div class="card" data-aos="zoom-out-down" style="width: 20rem;">
-          <div class="subtitulo">
-            <h5 class="card-title">1- PROVEEDORES</h5>
-          </div>
-
-          <img src="../imagenes/prove.jpg" class="card-img-top" alt="..." style="width:auto; height: 259.08px;">
-          <div class="card-body">
-            <p class="card-text">Se visualizara la lista de nuestros proveedores que estan en la empresa </p>
-          </div>
-          <div class="botonColor" style="background-color: darkgoldenrod;">
-            <a href="../Proveedor/proveedor.php" class="btn btn-custom">Ingresar</a>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card" data-aos="zoom-out-down" style="width: 20rem;">
-          <div class="subtitulo">
-            <h5 class="card-title">2- COMPRAS </h5>
-          </div>
-
-          <img src="../imagenes/c.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-
-            <p class="card-text">Se visualizara las productos que se compraron del proveedor</p>
-
-          </div>
-          <div class="botonColor" style="background-color: darkgoldenrod;">
-            <a href="../Proveedor/listaCompraProve.php" class="btn btn-custom">Ingresar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card" data-aos="zoom-out-down" style="width: 20rem;  margin-top: 2em;">
-          <div class="subtitulo">
-            <h5 class="card-title">3- PAGOS</h5>
-          </div>
-
-          <img src="../imagenes/pagos.jpg" class="card-img-top" alt="..." style="width:auto; height: 259.08px;">
-          <div class="card-body">
-            <p class="card-text">se visualizara los pagos realizados a los proveedores </p>
-          </div>
-          <div class="botonColor" style="background-color: darkgoldenrod;">
-            <a href="../Proveedor/pagos.php" class="btn btn-custom">Ingresar</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="card " data-aos="zoom-out-down" style="width: 20rem; margin-top: 2em; margin-bottom: 2em;">
-          <div class="subtitulo">
-            <h5 class="card-title">4- FACTURA</h5>
-          </div>
-          <img src="../imagenes/factura.png" class="card-img-top" alt="..." style="width:auto; height: 259.08px;">
-          <div class="card-body">
-            <p class="card-text">se visualizara las facturas de la compras hacia los proveedores</p>
-          </div>
-          <div class="botonColor" style="background-color: darkgoldenrod;">
-            <a href="../Proveedor/factura.php" class="btn btn-custom">Ingresar</a>
-          </div>
-        </div>
-
-      </div>
+  <section>
+    <div class="containerProve1">
+       <h2>Proveedor</h2>
+       <a href="">Ingresar</a>
     </div>
-  </div>
+    <div class="containerProve2">
+     <h2>Compras</h2>
+     <a href="">Ingresar</a>
+    </div>
+    <div class="containerProve3">
+      <h2>Pagos</h2>
+      <a href="">Ingresar</a>
+    </div>
+    <div class="containerProve4">
+     <h2>Factura</h2>
+     <a href="">Ingresar</a>
+    </div>
+  </section>
 
 
   <style>
-    .card {
-      border: 1px solid #ccc;
-      /* Borde del elemento */
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+      background-color: whitesmoke;
+      padding: 0;
     }
 
     nav {
-      background-color:darkgoldenrod;
-    }
-
-    nav div {
-            margin-left: 2em;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-
-        }
-
-    /* para quitar los bordes de boton */
-    nav .btn {
-       border: none;
-        }
-
-    #contenedor {
-      margin-top: 3em;
-      position: relative;
-      left: 100px;
+      background-color: #dc582a;
 
     }
 
-
-    .botonColor {
-      padding-bottom: 15px;
-    }
-
-    .btn-custom {
-      position: relative;
-      top: 10px;
-      background-color: darkgoldenrod;
-      /* Color de fondo inicial */
-      border-color: darkgoldenrod;
-      /* Color del borde inicial */
-      color: black;
-      /* Color del texto inicial */
-      transition: background-color 0.3s, color 0.3s;
-      /* Transición de animación */
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 18px;
-    }
-
-    /* Cambiar el color de fondo y el nombre al pasar el cursor sobre el botón */
-    .btn-custom:hover {
-      background-color: darkgoldenrod;
-      /* Nuevo color de fondo al pasar el cursor */
-      letter-spacing: 3px;
-      color: black;
-      /* Nuevo color del texto al pasar el cursor */
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 600;
-    }
-
-    .subtitulo {
-      background-color: darkgoldenrod;
-      padding-bottom: 20px;
-    }
-
-    h5 {
-      position: relative;
-      top: 10px;
-      text-align: center;
-      font-weight: 900;
+    .container-fluid a {
+      color: white;
+      font-size: 17px;
+      padding: 10px 9px;
+      font-weight: 300;
 
     }
 
-    p {
-      font-style: italic;
-      font-weight: 200;
+    .container-fluid #titulo {
+      font-weight: bold;
+      font-size: 23px;
+      padding-right: 55px;
+    }
+
+    .collapse .navbar-nav {
+      padding-left: 90px;
       letter-spacing: 1px;
-
     }
+
+    .collapse .dropdown-menu {
+      color: black;
+    }
+
+    section{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr ;
+      text-align: center;
+      gap: 9px;
+      margin-top: 55px;
+    }
+    section .containerProve1{
+      background-image:linear-gradient(0deg,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)),
+       url('../imagenes/proveedorFondo.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 400px;
+      margin-left: 30px;
+      box-shadow: 1px 2px 10px black;
+      border-radius: 4px;
+    }
+    .containerProve1 h2{
+      font-weight: 900;
+      color: white;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+    }
+
   </style>
 
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
-  </script>
+  AOS.init();
+ </script>
+
+  <!-- Incluir Bootstrap JS y jQuery (opcional) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"></script>
+
 
 </body>
 

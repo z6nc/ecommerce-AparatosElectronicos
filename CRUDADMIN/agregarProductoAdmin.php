@@ -14,47 +14,46 @@
                                    
   <body >
     <!-- Configuración del navbar user y lista -->
-<nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand" id="titulo" href="../Admin/indiceAdmin.html">ElectroTECHZONE</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="../Admin/indiceAdmin.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../Admin/listarProductoAdmin.php" style="padding-left: 22px;">Producto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../Admin/listarEmpleado.php" style="padding-left: 22px;">Empleado</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="padding-left: 22px;" href="../Proveedor/listarProveedor.html"
-              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Proveedor
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#" style="color: black;">1-proveedor</a></li>
-              <li><a class="dropdown-item" href="#" style="color: black;">2-compra</a></li>
-              <li><a class="dropdown-item" href="#" style="color: black;">3-pagos</a></li>
-              <li><a class="dropdown-item" href="#" style="color: black;">4-factura</a></li>
+        <a class="navbar-brand" id="titulo" href="../Admin/indiceAdmin.html">ElectroTECHZONE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="../Admin/indiceAdmin.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Admin/listarProductoAdmin.php" style="padding-left: 22px;">Producto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Admin/listarEmpleado.php" style="padding-left: 22px;">Empleado</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="padding-left: 22px;" href="../Proveedor/listarProveedor.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Proveedor
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../Proveedor/listarProveedor.html" style="color: black; text-align:center;">Principal</a></li>
+                        <li><a class="dropdown-item" href="../Proveedor/proveedor.php" style="color: black;text-align:center;">Proveedor</a></li>
+                        <li><a class="dropdown-item" href="../Proveedor/listaCompraProve.php" style="color: black;text-align:center;">Compra</a></li>
+                        <li><a class="dropdown-item" href="../Proveedor/pagos.php" style="color: black;text-align:center;">Pagos</a></li>
+                        <li><a class="dropdown-item" href="../Proveedor/factura.php" style="color: black;text-align:center;">Factura</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Admin/indexPrincipal.html">cerrar sesion</a>
+                </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../Admin/indexPrincipal.html">cerrar sesion</a>
-          </li>
-        </ul>
-      </div>
+        </div>
     </div>
-  </nav>
+</nav>
       
  <!-- Formulario de agregar Productos -->
     
-    <div class="containerPrincipal">
+    <div class="containerPrincipal"  data-aos="zoom-out" >
         <h1 class="text-center">Agregar productos</h1>
         
     <form  action="../CRUDADMIN/insertarProductoAdmin.php" method="POST" enctype="multipart/form-data" >
@@ -164,7 +163,7 @@
 
     
    <style>
-      body {
+     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       box-sizing: border-box;
@@ -191,7 +190,7 @@
       padding-right: 55px;
     }
 
-    .collapse ul {
+    .collapse .navbar-nav {
       padding-left: 90px;
       letter-spacing: 1px;
     }
@@ -199,6 +198,7 @@
     .collapse .dropdown-menu {
       color: black;
     }
+
 
 
     .containerPrincipal{
@@ -226,6 +226,9 @@
         padding: 10px 73px;
         font-size: 17px;
         margin-bottom: 30px;
+    }
+    .containerPrincipal input{
+      border: 1px solid  #4B4B4B ;
     }
 
     form .botones{

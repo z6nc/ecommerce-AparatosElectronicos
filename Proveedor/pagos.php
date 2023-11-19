@@ -119,7 +119,7 @@ body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             box-sizing: border-box;
-            background-color: #EAE6CA;
+            background-color: whitesmoke;
             padding: 0;
         }
 

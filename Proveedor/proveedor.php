@@ -108,7 +108,7 @@
             echo "<td>$usuario</td>";
             echo "<td>$contraseña</td>";
             echo "<td>
-        <a href='Formulario/editar.php?id=$idProveedor' class=\"btn btn-warning  custom-link \"><i class='fas fa-edit'></i></a>
+        <a href='../CRUDPROVEE/EditarProveedor.php?id=$idProveedor' class=\"btn btn-warning  custom-link \"><i class='fas fa-edit'></i></a>
         <br>
         <br>
         <a href='../CRUDPROVEE/eliminarProvee.php?ID_PROVEEDOR=$idProveedor'class=\"btn btn-danger custom-link\"><i class='fas fa-trash'></i></a>

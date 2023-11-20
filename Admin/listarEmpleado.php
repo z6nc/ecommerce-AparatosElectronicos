@@ -125,7 +125,7 @@
             echo "<td>$usuario</td>";
             echo "<td>$contraseña</td>";
             echo "<td>
-        <a href='Formulario/editar.php?id=$idEmple' class=\"btn btn-warning  custom-link \"><i class='fas fa-edit'></i></a>
+        <a href='../CRUDADMIN/EditarEmpleado.php?id=$idEmple' class=\"btn btn-warning  custom-link \"><i class='fas fa-edit'></i></a>
         <br>
         <br>
         <a href='../CRUDADMIN/eliminarEmpleado.php?ID_EMPLEADO=$idEmple'class=\"btn btn-danger custom-link\"><i class='fas fa-trash'></i></a>

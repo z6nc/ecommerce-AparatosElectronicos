@@ -1,9 +1,9 @@
 
 <?php
-  $imagenExistente = "";
-  $imagenExistente2 = "";
-  $imagenExistente3 = "";
-  $imagenExistente4 = "";
+  $imagenExistente ="";
+  $imagenExistente2 ="";
+  $imagenExistente3 ="";
+  $imagenExistente4 ="";
   
   include("../config/conexion.php");
 
@@ -64,7 +64,7 @@
     // Realizar la actualización en la base de datos
     $sql = "UPDATE producto SET ID_FACTURA_P=?, N_PRODUCTO=?, DESCRIPCION=?, PRECIO=?, STOCK=?, MARCA=?, PAGPRIN=?,IMG=?, IMAGEN2=?, IMAGEN3=?, IMAGEN4=? WHERE ID_PRODUCTO=?";
     $stmt = $conexion->prepare($sql);
-    $stmt->bind_param("ssssissbbbbi", $nombreFactura ,$nombreP, $descripcionP, $precioP, $stockP, $marcaP, $paginaPrin, $imagenData, $imagenData2, $imagenData3, $imagenData4 ,$idProducto);
+    $stmt->bind_param("ssssissssssi", $nombreFactura ,$nombreP, $descripcionP, $precioP, $stockP, $marcaP, $paginaPrin, $imagenData, $imagenData2, $imagenData3, $imagenData4 ,$idProducto);
                       
 
     // Agrega mensajes de depuración aquí

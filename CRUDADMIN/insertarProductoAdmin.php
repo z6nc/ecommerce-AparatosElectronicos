@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_FILES['imagenP']) && $_FILES['imagenP']['error'] === UPLOAD_ERR_OK) {
         $imagenP = file_get_contents($_FILES['imagenP']['tmp_name']);
     } else {
-        echo "La imagen principal es obligatoria.";
+        echo "Error al cargar la imagen principal: " . $_FILES['imagenP']['error'];
         exit;
     }
 
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = mysqli_prepare($conexion, $sql);
 
     if ($stmt) {
-        mysqli_stmt_bind_param($stmt, "ssssissbbbb", $nombref, $nombre, $descripcion, $precio, $stock, $marca, $pagiPrin, $imagenP, $imagenP2, $imagenP3, $imagenP4);
+        mysqli_stmt_bind_param($stmt, "ssssissssss", $nombref, $nombre, $descripcion, $precio, $stock, $marca, $pagiPrin, $imagenP, $imagenP2, $imagenP3, $imagenP4);
 
         if (mysqli_stmt_execute($stmt)) {
             header("location:../Admin/listarProductoAdmin.php");

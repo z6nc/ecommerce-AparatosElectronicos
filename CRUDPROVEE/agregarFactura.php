@@ -85,7 +85,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label"   >CANTIDAD : </label>
-            <input type="text" class="form-control"   maxlength="11" minLength="2" name="cantidadP" required>
+            <input type="text" class="form-control"   maxlength="11" minLength="1" name="cantidadP" required>
             
         </div>
         <div class="mb-3"> 

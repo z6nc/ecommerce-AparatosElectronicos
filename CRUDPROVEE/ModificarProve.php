@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo '<script>';
-        echo 'alert("Empleado actualizado correctamente.");';
+        echo 'alert("Proveedor actualizado correctamente.");';
         echo 'window.location.href = "../Proveedor/proveedor.php";';
         echo '</script>';
     } else {

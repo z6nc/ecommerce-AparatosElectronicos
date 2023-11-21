@@ -100,7 +100,7 @@
                         echo "<td>$descripcion</td>";
                         echo "<td>S/ $precio</td>";
                         echo "<th>
-                    <a href='Formulario/editar.php?id=$idcompras' class=\"btn btn-warning custom-link \"><i class='fas fa-edit'></i> </a>
+                    <a href='../CRUDPROVEE/editarCompraPro.php?id=$idcompras' class=\"btn btn-warning custom-link \"><i class='fas fa-edit'></i> </a>
                     <br>
                     <br>
                     <a href='../CRUDPROVEE/eliminarCompra.php?ID_COMPRAS_P=$idcompras'class=\"btn btn-danger custom-link\"><i class='fas fa-trash'></i></a>

@@ -63,7 +63,7 @@ include ("../config/conexion.php");
                         <input name="titulo" type="hidden" id="titulo<?php echo $resultado["ID_PRODUCTO"]; ?>" value="<?php echo $resultado["N_PRODUCTO"]; ?>" />
                         <input name="cantidad" type="hidden" id="cantidad<?php echo $resultado["ID_PRODUCTO"]; ?>" value="1" class="pl-2" />
 
-
+<h1>
                         </div>
                         </div>
                     </div>

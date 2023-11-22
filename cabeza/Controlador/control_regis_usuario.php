@@ -15,6 +15,7 @@ if (!empty($_POST["registro"])) {
             echo '<div class="success">Usuario registrado correctamenet</div>';
         } else {
             echo '<div class="alerta">Error al registrarse</div>';
+            echo
         }
         
     }

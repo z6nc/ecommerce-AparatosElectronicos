@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agregar Productos</title>
+    <title>Agregar Factura</title>
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-               
+                                   <!-- el diseño esta hecho con boostrap  --> 
+                                 <!-- el styleLista.css es solo para el banner --> 
+                                   
   <body >
     <!-- Configuración del navbar user y lista -->
 
@@ -50,55 +52,53 @@
         </div>
     </div>
 </nav>
-<!------------------------------------------------------------------------------------------------------------------------------ -->
+<?php
+        include('../CRUDPROVEE/ModificarFactura.php');
+        ?>
       
- <!---------------------------------------- Formulario de agregar Productos ---------------------------------------------->
+ <!-- Formulario de agregar Productos -->
      <br>
-     
-    <div class="containerGeneral" data-aos="zoom-out" >
-        <h1 class="text-center">Editar Pago</h1>
+    <div class="containerGeneral" data-aos="zoom-out">
+        <h1 class="text-center">Agregar Factura</h1>
         <hr style="border:1px solid black;">
-    <form  action="../CRUDPROVEE/ModificarPagos.php" method="POST" enctype="multipart/form-data" >
-    <input type="hidden" name="idPago" value="<?php echo $idPago; ?>">
-
-    <label for="" >Nombre Compra :</label>
-    <select class="form-select mb-3 "   name="nombreC">
+    <form  action="../CRUDPROVEE/ModificarFactura.php" method="POST" enctype="multipart/form-data" >
+    <input type="hidden" name="idFactura" value="<?php echo $idFactura; ?>">
+    <label for=""   >ID PAGO :</label>
+    <select class="form-select mb-3 "    name="pagoID">
     <?php
                 // Obtener todas las categorías de la base de datos
-                $sqlPago = "SELECT ID_COMPRAS_P, PRODUCTO_P FROM comprasproveedor";
+                $sqlPago = "SELECT ID_PAGO_P FROM pago_proveedor";
                 $resultPago = $conexion->query($sqlPago);
                 while ($rowPago = $resultPago->fetch_assoc()) {
-                    $PagoID = $rowPago["ID_COMPRAS_P"];
-                    $PagoDescripcion = $rowPago["PRODUCTO_P"];
-                    $selectedPago = ($PagoID == $nombreC) ? "selected" : "";
+                    $PagoID = $rowPago["ID_PAGO_P"];
+                    $PagoDescripcion = $rowPago["ID_PAGO_P"];
+                    $selectedPago = ($PagoID == $pagoID) ? "selected" : "";
                     echo "<option value='$PagoID' $selectedPago>$PagoDescripcion</option>";
                 }
                 ?>
     </select>  
 
-
-        <div class="mb-3"  >
-            <label class="form-label"   >Forma de Pago : </label>
-            <select class="form-select mb-3" name="formaP" value="<?php echo $formaP; ?>" required>
-                <option value="Paypal"> Paypal</option>
-                <option value="Banco">Banco</option>
-            </select>
-
-        </div>   
+        
         <div class="mb-3" >
-            <label class="form-label"   >Fecha de Pago : </label>
-            <input type="date" class="form-control"  name="fechaP"  value="<?php echo $fechaP; ?>" required>
+            <label class="form-label"   > PRODUCTO  : </label>
+            <input type="text" class="form-control"   maxlength="40" minLength="4"  name="productoP" value="<?php echo $productoP; ?>" required>
             
         </div>
-        
+        <div class="mb-3">
+            <label class="form-label"   >CANTIDAD : </label>
+            <input type="text" class="form-control"   maxlength="11" minLength="1" name="cantidadP" value="<?php echo $cantidadP; ?>" required>
+            
+        </div>
+        <div class="mb-3"> 
+            <label class="form-label"   >MONTO TOTAL : </label>
+            <input type="text" class="form-control"  minLength="1" maxlength="40000"   name="montoP" value="<?php echo $montoP; ?>"  required>
+            
+        </div>
        
      
-        <!-- este boton agregar sirve apra agregar  a la base de datos   -->
-        <!-- este boton volver te redirecciona a la lista de productos , por ello dice
-         listaproductos.php  -->
-        <div class="Botones">
-            <button type="submit" class="btn btn-danger"    >Agregar <i class="fas fa-plus"></i></button>
-            <a href="../Proveedor/pagos.php" class="btn btn-dark">Volver <i class="fas fa-arrow-left"></i></a>
+        <div class="Botones" >
+            <button type="submit" class="btn btn-danger" >Guardar <i class="fas fa-plus"></i></button>
+            <a href="../Proveedor/factura.php" class="btn btn-dark">Volver <i class="fas fa-arrow-left"></i></a>
         </div>   
       
     </form>
@@ -198,5 +198,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
 </body>
 </html>

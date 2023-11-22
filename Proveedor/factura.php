@@ -95,7 +95,7 @@
         echo"<td> S/ $monto</td>";
         echo"<td>$cantidad</td>";
         echo "<td>
-                    <a href='Formulario/editar.php?id=$idFactura' class=\"btn btn-warning custom-link \"><i class='fas fa-edit'></i> </a>
+                    <a href='../CRUDPROVEE/editarFactura.php?id=$idFactura' class=\"btn btn-warning custom-link \"><i class='fas fa-edit'></i> </a>
                     <br>
                     <br>
                     <a href='../CRUDPROVEE/eliminarFactura.php?ID_FACTURA_P=$idFactura'class=\"btn btn-danger custom-link\"><i class='fas fa-trash'></i></a>

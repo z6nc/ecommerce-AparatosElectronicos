@@ -89,7 +89,7 @@
             echo"<td>$formasPago</td>";
             echo "<td>$fechaPago</td>";
             echo "<td>
-            <a href='Formulario/editar.php?id=$idPago' class=\"btn btn-warning custom-link \"><i class='fas fa-edit'></i> </a>
+            <a href='../CRUDPROVEE/editarPagos.php?id=$idPago' class=\"btn btn-warning custom-link \"><i class='fas fa-edit'></i> </a>
                     <br>
                     <br>
             <a href='../CRUDPROVEE/eliminarPago.php?ID_PAGO_P=$idPago'class=\"btn btn-danger custom-link \"> <i class='fas fa-trash'></i></a>

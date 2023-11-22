@@ -5,20 +5,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $idcompras = $_POST["idcompras"];
     $nombreAdmin = $_POST["nombreAdmin"];
-    $razonSocialProveedor = $_POST["proveedor"];  // Modificado aquí para usar el nombre correcto del campo del formulario
+    $proveedor = $_POST["proveedor"];  // Modificado aquí para usar el nombre correcto del campo del formulario
     $productoP = $_POST["productoP"];
     $descripcionP = $_POST["descripcionP"];
     $precioP = $_POST["precioP"];
     
     $nombreAdmin = mysqli_real_escape_string($conexion, $nombreAdmin);
-    $razonSocialProveedor = mysqli_real_escape_string($conexion, $razonSocialProveedor);
+    $proveedor = mysqli_real_escape_string($conexion, $proveedor);
     $productoP = mysqli_real_escape_string($conexion, $productoP);
     $descripcionP = mysqli_real_escape_string($conexion, $descripcionP);
     $precioP = mysqli_real_escape_string($conexion, $precioP);
 
     $sql = "UPDATE comprasproveedor SET ID_ADMIN=?, ID_PROVEEDOR=?, PRODUCTO_P=?, DESCRIPCION_P=? ,PRECIO_P=? WHERE ID_COMPRAS_P=?";
     $stmt = $conexion->prepare($sql);
-    $stmt->bind_param("sssssi", $nombreAdmin, $razonSocialProveedor, $productoP, $descripcionP, $precioP, $idcompras );
+    $stmt->bind_param("sssssi", $nombreAdmin, $proveedor, $productoP, $descripcionP, $precioP, $idcompras );
      
     if ($stmt->execute()) {
         echo '<script>';
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conexion->close();
 } else {
     $idcompras = $_GET["id"];
-    $sql = "SELECT a.NOMBRE, p.RAZON_SOCIAL , c.PRODUCTO_P, c.DESCRIPCION_P, c.PRECIO_P
+    $sql = "SELECT c.ID_ADMIN , c.ID_PROVEEDOR , c.PRODUCTO_P, c.DESCRIPCION_P, c.PRECIO_P 
         FROM comprasproveedor c
         INNER JOIN admin a ON c.ID_ADMIN = a.ID_ADMIN
         INNER JOIN proveedor p ON c.ID_PROVEEDOR = p.ID_PROVEEDOR
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("i", $idcompras);
   
     if ($stmt->execute()) {
-        $stmt->bind_result($nombreAdmin, $razonSocialProveedor, $productoP, $descripcionP, $precioP);
+        $stmt->bind_result($nombreAdmin, $proveedor, $productoP, $descripcionP, $precioP );
         $stmt->fetch();
         $stmt->close();
     }

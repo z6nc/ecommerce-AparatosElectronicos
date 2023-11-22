@@ -46,7 +46,7 @@
                 </div>
                 <div class= "cuenta">
                     <input class="boton" type="submit" value="Registrar" name="registro">
-                    <a href="conexion.php"></a>
+                    <a href="../../paginas/inicio.php"></a>
                 </div>
             </div>
         </form>

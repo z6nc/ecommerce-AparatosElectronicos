@@ -131,7 +131,7 @@ if ($sql) {
         echo "<td><img  style='width: 100px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen4) . "'></td>";
         echo "<td>$paginaPrin</td>";
         echo "<td>
-        <a href='Formulario/editar.php?id=$idProducto' class=\"btn btn-warning\"><i class='fas fa-edit'></i></a>
+        <a href='../CRUDADMIN/editarProductoAdmin.php?id=$idProducto' class=\"btn btn-warning\"><i class='fas fa-edit'></i></a>
         <br>
         <br>
         <a href='../CRUDADMIN/eliminarProductoAdmin.php?ID_PRODUCTO=$idProducto'class=\"btn btn-danger\">X</a>

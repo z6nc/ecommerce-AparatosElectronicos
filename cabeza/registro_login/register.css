@@ -1,0 +1,86 @@
+/* General styles */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Form styles */
+  
+  .formulario {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .padre {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .DNI,
+  .NOMBRE,
+  .APELLIDO,
+  .DIRECCION,
+  .CELULAR,
+  .EMAIL,
+  .PASSWORD,
+  .cuenta {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .DNI label,
+  .NOMBRE label,
+  .APELLIDO label,
+  .DIRECCION label,
+  .CELULAR label,
+  .EMAIL label,
+  .PASSWORD label {
+    flex: 0.2;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .DNI input,
+  .NOMBRE input,
+  .APELLIDO input,
+  .DIRECCION input,
+  .CELULAR input,
+  .EMAIL input,
+  .PASSWORD input {
+    flex: 0.8;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .boton {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .alerta{
+    text-align: center;
+    color: red;
+  }
+  
+  .success{
+    text-align: center;
+    color: green;
+  }

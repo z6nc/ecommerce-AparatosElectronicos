@@ -61,10 +61,11 @@ if (!empty($_POST["registro"])) {
 
 
         $resultado = $stmt->execute();
-
+     
 
         if ($resultado) {
             echo '<div class="success">Usuario registrado correctamente</div>';
+            header("location: ../../paginas/inicio.php");
         } else {
             echo '<div class="alerta">Error al registrarse en la base de datos</div>';
         }

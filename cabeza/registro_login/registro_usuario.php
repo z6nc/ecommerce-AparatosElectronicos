@@ -1,16 +1,20 @@
+<?php
+            include("../../config/conexion.php");
+
+            ?>
+
 <!DOCTYPE html> 
 <html lang="en">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administrador indice</title>
+<link rel="stylesheet" href="register.css">
 </head>
 <body>
     <div class="container">
         <form action="../Controlador/control_regis_usuario.php" method="POST" class="formulario">
-            <h2 class="titulo">REGISTRARSE</h2>
-            <link rel="stylesheet" href="register.css">
-            <?php
-            include("../../config/conexion.php");
-
-            ?>
+            <h2 class="titulo">REGISTRARSE</h2>           
             <div class="padre">
                 <div class="DNI">
                     <label for="">Ingrese D.N.I.</label>

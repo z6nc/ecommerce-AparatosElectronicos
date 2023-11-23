@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agregar Factura</title>
+    <title>editar Factura</title>
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -52,14 +52,14 @@
         </div>
     </div>
 </nav>
-<?php
-        include('../CRUDPROVEE/ModificarFactura.php');
-        ?>
       
+      <?php
+        include('../CRUDPROVEE/ModificarFactura.php');
+        ?> 
  <!-- Formulario de agregar Productos -->
      <br>
     <div class="containerGeneral" data-aos="zoom-out">
-        <h1 class="text-center">Agregar Factura</h1>
+        <h1 class="text-center">Editar Factura</h1>
         <hr style="border:1px solid black;">
     <form  action="../CRUDPROVEE/ModificarFactura.php" method="POST" enctype="multipart/form-data" >
     <input type="hidden" name="idFactura" value="<?php echo $idFactura; ?>">

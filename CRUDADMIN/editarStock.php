@@ -53,14 +53,14 @@
         </nav>
 
         <?php
-        include('../CRUDADMIN/ModificarProducto.php');
+        include('../CRUDADMIN/ModificarStock.php');
         ?>
         <!-- Formulario de agregar Productos -->
 
         <div class="containerPrincipal" data-aos="zoom-out">
             <h1 class="text-center">Modificar productos</h1>
 
-            <form action="../CRUDADMIN/ModificarProducto.php" method="POST" enctype="multipart/form-data">
+            <form action="../CRUDADMIN/ModificarStock.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="idProducto" value="<?php echo $idProducto; ?>">
                 <div class="mb-3">
                     <label class="form-label">Stock : </label>

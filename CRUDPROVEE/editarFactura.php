@@ -70,10 +70,10 @@
                 $sqlPago = "SELECT ID_PAGO_P FROM pago_proveedor";
                 $resultPago = $conexion->query($sqlPago);
                 while ($rowPago = $resultPago->fetch_assoc()) {
-                    $PagoID = $rowPago["ID_PAGO_P"];
+                    $PagoIDs = $rowPago["ID_PAGO_P"];
                     $PagoDescripcion = $rowPago["ID_PAGO_P"];
-                    $selectedPago = ($PagoID == $pagoID) ? "selected" : "";
-                    echo "<option value='$PagoID' $selectedPago>$PagoDescripcion</option>";
+                    $selectedPago = ($PagoIDs == $pagoID) ? "selected" : "";
+                    echo "<option value='$PagoIDs' $selectedPago>$PagoDescripcion</option>";
                 }
                 ?>
     </select>  

@@ -69,7 +69,7 @@
                 </div>
                 <div class="botones">
                     <button type="submit" class="btn btn-danger">Guardar<i class="fas fa-plus"></i></button>
-                    <a href="../Admin/listarProductoAdmin.php" class="btn btn-dark">Volver <i class="fas fa-arrow-left"></i></a>
+                    <a href="../Admin/listarProducto.php" class="btn btn-dark">Volver <i class="fas fa-arrow-left"></i></a>
                 </div>
 
             </form>

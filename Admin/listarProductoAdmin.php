@@ -61,6 +61,23 @@
     <section >
    
       <h1 class="text-center" > Lista de productos</h1>
+      <div class="ConteBuscador">
+      <div class="as">
+        <label class="Emple"> Nombre </label>
+        <input type="search" class="buscador" id="buscador" name="buscador">
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+      <div class="as">
+        <label class="Emple"> Marca </label>
+        <input type="search" class="Marca" id="Marca" name="Marca">
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+      <div class="as">
+        <label class="Emple"> Stock </label>
+        <input type="search" class="stock" id="stock" name="stock">
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
 
       <div class="contenedor" >
             <a href="../CRUDADMIN/agregarProductoAdmin.php"class="btn btn-success  text-center " >Agregar Compra  </a>
@@ -116,14 +133,14 @@ if ($sql) {
         
     
         // Imprime las filas de la tabla con las columnas específicas
-        echo "<tr  data-aos=\"zoom-in-up\"  >";
+        echo "<tr >";
         echo "<th scope='row'>$idProducto</th>";
         echo "<td>$facturaProve</td>";
-        echo "<td>$nombreProducto</td>";
+        echo "<td class=\"articulos\">$nombreProducto</td>";
         echo "<td>$descripcion</td>";
         echo "<td> S/  $precio</td>";
-        echo "<td>$stock</td>";
-        echo "<td>$marca</td>";
+        echo "<td  class=\"articuloTres\">$stock</td>";
+        echo "<td class=\"articuloDos\">$marca</td>";
         echo "<td><img  style='width: 100px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen) . "'></td>";
         echo "<td><img  style='width: 100px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen2) . "'></td>";
         echo "<td><img  style='width: 100px; border-radius: 30px;'  src='data:image/jpg;base64," . base64_encode($imagen3) . "'></td>";
@@ -220,7 +237,44 @@ $conexion->close();
       margin-left: 75%;
       margin-top: 40px;
      }
+     .filtro {
+      display: none;
+    }
+
+    .ConteBuscador {
+      display: grid;
+      grid-template-columns:  34% 33% 33%;
+      color: black;
+      font-weight: 400;      
+      margin: 0;
+      
      
+    }
+    .ConteBuscador input{
+      margin-left: 10px;
+      border: 1px solid lightgray;
+      border-radius: 7px;
+
+    }
+    .ConteBuscador .as{
+      padding: 15px 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .as a{
+      background-color: #dc582a;
+      color: white;
+      margin-left: 2px;
+      padding: 6px 13px;
+      border-radius: 9px;
+    }
+    .as i{
+      font-size: 12px;
+    }
+    
   </style>
 
 
@@ -229,7 +283,7 @@ $conexion->close();
 
     
     
-    
+<script src="../Javascrip/buscadorProductoAdmin.js"> </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();

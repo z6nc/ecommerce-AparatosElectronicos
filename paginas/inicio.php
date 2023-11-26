@@ -97,7 +97,7 @@ include("../config/conexion.php");
     <img src="../imagenes/principal4.png" alt="">
     </div>
     <div>
-    <img src="../imagenes/principal5.png" alt="">
+    <img src="../imagenes/principal5.png" alt="s">
     </div>
     <div>
     <img src="../imagenes/principal6.png" alt="">
@@ -107,9 +107,10 @@ include("../config/conexion.php");
     </div>
   </aside>
 
-
+  <br>
+  <br>
   <div class="mapas">
-    <h2>Ubicanos:</h2>
+    <h2>Ubicanos</h2>
   <div id="mapa" style="height: 400px; margin: 40px 20px;"></div>
   </div>
   
@@ -143,7 +144,6 @@ include("../config/conexion.php");
     section {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-
       text-align: center;
     }
 
@@ -167,6 +167,12 @@ include("../config/conexion.php");
     aside img{
       border-radius: 14px;
     }
+    .mapas h2{
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #1078ff;
+    }
 
 
     @media screen and (max-width: 767px) {
@@ -174,9 +180,21 @@ include("../config/conexion.php");
         grid-template-columns: repeat(1, 1fr);
 
       }
+      section .f {
+      margin: 10px 9px;
+
+    }
 
       section img {
-        width: 380px;
+        width: 330px;
+      }
+      aside{
+        grid-template-columns: repeat(1, 1fr 1fr);
+        gap: 10px;
+        
+      }
+      aside img{
+        width: 250px;
       }
     }
   </style>

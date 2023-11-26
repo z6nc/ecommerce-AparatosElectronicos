@@ -94,7 +94,7 @@ include("../config/conexion.php");
 
   <aside>
     <div>
-    <img src="../imagenes/principal4.png" alt="">
+    <img src="../imagenes/principal4.png" alt="s">
     </div>
     <div>
     <img src="../imagenes/principal5.png" alt="s">

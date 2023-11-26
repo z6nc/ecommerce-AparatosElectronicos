@@ -12,7 +12,7 @@ include ("../config/conexion.php");
 </head>
 <body>
     <?php 
-      include ("casa.html");
+      include ("../cabeza/cabeza.html");
     ?>
 
 

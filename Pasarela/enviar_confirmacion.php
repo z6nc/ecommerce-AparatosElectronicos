@@ -24,7 +24,7 @@ $mail->addAddress($email); // dirección de correo y nombre del destinatario
 $mail->isHTML(true);
 $mail->Subject = 'Se ha realizado con exito su pedido - NovoTech'; // Asunto del correo
 
-$cuerpo = '<h4>"¡Gracias por comprar con ELECTROTCHZONE!</h4>';
+$cuerpo = '<h4>"¡Gracias por comprar con NovoTech!</h4>';
 $cuerpo .= '<p> A continuacion le adjuntamos los datos de su compra.';
 $cuerpo .= '<p> ID de la compra: <b>' . $id_transaccion . '</b></p>';
 $cuerpo .= '<p> Fecha de la compra: <b>' . $fecha . '</b></p>';

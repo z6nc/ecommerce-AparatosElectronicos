@@ -18,7 +18,7 @@ include("../config/conexion.php");
 
 <body>
   <?php
-  include("casa.html");
+  include("../cabeza/cabeza.html");
   ?>
 
 

@@ -98,10 +98,10 @@ include ("../config/conexion.php");
       letter-spacing: 1px;
       color: #1078ff;
       text-shadow: 0px 0px 2px black;
-      font-size: 37px;
+      font-size: 9vh;
    }
 
-   @media 
+  
    </style>
 
 

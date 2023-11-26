@@ -15,7 +15,7 @@ if (is_array($datos)) {
     $email = $datos['detalles']['payer']['email_address'];
     $id_cliente = $datos['detalles']['payer']['payer_id'];
 
-    $sql = $conexion->prepare("INSERT INTO compra (id_transaccion, fecha, status, email, ID_CLIENTE, total) VALUES (?,?,?,?,?,?)");
+    $sql = $conexion->prepare("INSERT INTO compra (id_transaccion, fecha, status, email, id_cliente, total) VALUES (?,?,?,?,?,?)");
     $sql->bind_param("sssssd", $id_transaccion, $fecha_nueva, $status, $email, $id_cliente, $total);
     $sql->execute();
     $id = $conexion->insert_id;

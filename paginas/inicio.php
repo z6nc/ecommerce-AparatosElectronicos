@@ -97,8 +97,7 @@ include ("../config/conexion.php");
       font-weight: bold;
       letter-spacing: 1px;
       color: #1078ff;
-      text-shadow: 0px 0px 2px black;
-      font-size: 9vh;
+      font-size: 5.5vh;
    }
 
   

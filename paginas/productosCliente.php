@@ -6,6 +6,7 @@ include ("../config/conexion.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
     <title>Productos</title>
@@ -15,12 +16,12 @@ include ("../config/conexion.php");
 
 
 
-    <section>
+    <section >
             <?php 
             $buscardor=mysqli_query($conexion,"SELECT * FROM producto "); 
             while($resultado = mysqli_fetch_assoc($buscardor)){ 
                ?>
-               <div class="container">
+               <div class="container" data-aos="zoom-in-up">
                         <a href="#"><img src="data:image/jpeg;base64,<?php echo base64_encode($resultado['IMG']); ?>" alt="" class="card-img-top" height="200px" wigth="100px"></a>
                         
                             <h5  class="card-title"><a href="detalles.php?id=<?php echo $resultado["ID_PRODUCTO"]; ?>"><?php echo $resultado["N_PRODUCTO"]; ?></a></h5>
@@ -40,67 +41,79 @@ include ("../config/conexion.php");
               
     </section>
     <style>
-      body{
+      body {
         margin: 0;
         box-sizing: border-box;     
         font-family: 'Montserrat', sans-serif;
         background-color: #fff9f9;
-
       }
 
-      section{
+      section {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        
-        
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
       }
-      section .container{
+
+      section .container {
         text-align: center;
-       border: 1px solid lightgray;
-       border-radius: 7px;
-        margin: 15px 55px;
+        border: 1px solid lightgray;
+        border-radius: 7px;
+        margin: 20px 30px;
         background-color: white;
       }
-      .container a{
-       text-decoration: none;
-       color: #1078ff;
-       font-size: 16px;
-       letter-spacing: 2px;
 
+      .container a {
+        text-decoration: none;
+        color: #1078ff;
+        font-size: 16px;
+        letter-spacing: 2px;
       }
-      section .container:hover{
+
+      section .container:hover {
         box-shadow: 1px 2px 10px gray;
       }
-      .container button{
+
+      .container button {
         cursor: pointer;
         padding: 10px 32px;
         border-radius: 9px;
-        border: none;
         color: whitesmoke;
         background-color: #0455bd;
         font-weight: 900;
-       border: none;
+        border: none;
         white-space: nowrap;
         letter-spacing: 1px;
         margin-bottom: 12px;
-        
-        
-        
       }
-      .container button:hover{
+
+      .container button:hover {
         background-color: #1078ff;
         color: whitesmoke;
         box-shadow: 0px 0px 10px black;
-       
       }
-      .container p{
+
+      .container p {
         color: black;     
         letter-spacing: 1px;
+      }
 
-      }
-      .container img{
+      .container img {
         padding-top: 10px;
+        max-width: 100%;
+        height: auto;
       }
+
+      @media screen and (max-width: 767px) {
+        section {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+     
     </style>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

@@ -14,7 +14,7 @@ $pdf->Image('./img/logo.png',165,12,35,35,'PNG');
 # Encabezado y datos de la empresa #
 $pdf->SetFont('Arial','B',16);
 $pdf->SetTextColor(32,100,210);
-$pdf->Cell(150,10,utf8_decode(strtoupper("ELECTROTCHZONE")),0,0,'L');
+$pdf->Cell(150,10,utf8_decode(strtoupper("tecnica pe XD")),0,0,'L');
 
 $pdf->Ln(9);
 
@@ -49,7 +49,7 @@ $pdf->Ln(7);
 $pdf->SetFont('Arial','',10);
 $pdf->Cell(12,7,utf8_decode("Cajero:"),0,0,'L');
 $pdf->SetTextColor(97,97,97);
-$pdf->Cell(134,7,utf8_decode("ELECTROTCHZONE Payments"),0,0,'L');
+$pdf->Cell(134,7,utf8_decode("NovoTech Payments"),0,0,'L');
 $pdf->SetFont('Arial','B',10);
 $pdf->SetTextColor(97,97,97);
 $pdf->Cell(35,7,utf8_decode(strtoupper("1")),0,0,'C');

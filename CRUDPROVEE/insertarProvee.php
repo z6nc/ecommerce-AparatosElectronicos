@@ -13,7 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_bind_param($stmt, "sssss", $ruc, $razonSocial, $telefono, $usuario, $contraseña);
     
     if (mysqli_stmt_execute($stmt)) {
-        header("location:../Proveedor/proveedor.php");
+        echo '<script>';
+        echo 'alert("Proveedor registrado correctamente.");';
+        echo 'window.location.href = "../Proveedor/proveedor.php";';
+        echo '</script>';
+        
     } else {
         echo "Error al insertar datos: " . mysqli_error($conexion);
     }

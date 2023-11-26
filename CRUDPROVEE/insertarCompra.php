@@ -14,7 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     try {
         if (mysqli_stmt_execute($stmt)) {
-            header("location:../Proveedor/listaCompraProve.php");
+            echo '<script>';
+            echo 'alert("Compra registrado correctamente.");';
+            echo 'window.location.href = "../Proveedor/listaCompraProve.php";';
+            echo '</script>';
+            
         } else {
             echo "Error al insertar: " . mysqli_error($conexion);
         }

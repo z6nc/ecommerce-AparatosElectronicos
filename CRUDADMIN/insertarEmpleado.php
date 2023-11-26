@@ -14,7 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_bind_param($stmt, 'ssss', $dni, $nombre, $usuario, $contraseña);
     try {
         if (mysqli_stmt_execute($stmt)) {
-            header("location:../Admin/listarEmpleado.php");
+            echo '<script>';
+            echo 'alert("Empleado registrado correctamente.");';
+            echo 'window.location.href = "../Admin/listarEmpleado.php";';
+            echo '</script>';
+           
         } else {
             echo "Error al insertar: " . mysqli_error($conexion);
         }

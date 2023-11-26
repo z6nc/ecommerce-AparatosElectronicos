@@ -11,7 +11,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
    mysqli_stmt_bind_param($stmt,"sss",$nombreCompra,$formaPago,$fechaPago);
 
    if (mysqli_stmt_execute($stmt)) {
-    header("location:../Proveedor/pagos.php");
+      echo '<script>';
+      echo 'alert("Factura registrado correctamente.");';
+      echo 'window.location.href = "../Proveedor/pagos.php";';
+      echo '</script>';
+    
    } else {
     echo "error  al insertar datos ". mysqli_error($conexion);
    }

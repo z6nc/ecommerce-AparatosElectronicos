@@ -83,7 +83,7 @@
     $conexion->close();
   } else {
     $idProducto = $_GET["id"];
-    $sql = "SELECT p.N_PRODUCTO, p.DESCRIPCION, p.PRECIO, p.STOCK, p.ID_FACTURA_P, p.IMG,p.IMAGEN2,p.IMAGEN3,p.IMAGEN4,p.PAGPRIN, p.MARCA ,f.PRODUCTO_P
+    $sql = "SELECT p.ID_FACTURA_P,p.N_PRODUCTO, p.DESCRIPCION, p.PRECIO, p.STOCK,p.MARCA ,p.PAGPRIN, p.IMG,p.IMAGEN2,p.IMAGEN3,p.IMAGEN4
             FROM producto p
             INNER JOIN factura_proveedor f  ON p.ID_FACTURA_P = f.ID_FACTURA_P
             WHERE p.ID_PRODUCTO = ?";
@@ -91,7 +91,7 @@
     $stmt->bind_param("i", $idProducto);
 
     if ($stmt->execute()) {
-      $stmt->bind_result($nombreP, $descripcionP, $precioP, $stockP, $nombreFactura, $imagenData,$imagenData2,$imagenData3,$imagenData4,$paginaPrin, $marcaP,  $idProducto);
+      $stmt->bind_result($nombreFactura,$nombreP, $descripcionP, $precioP, $stockP,$marcaP,$paginaPrin,$imagenData,$imagenData2,$imagenData3,$imagenData4);
       $stmt->fetch();
       $stmt->close();
     }

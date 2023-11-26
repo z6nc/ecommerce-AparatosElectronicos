@@ -14,7 +14,7 @@
   <!-- ---------------------------------------------NAVBAR --------------------------------------------------->
   <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-            <a class="navbar-brand" id="titulo" href="../Admin/indiceAdmin.html">ElectroTECHZONE</a>
+            <a class="navbar-brand" id="titulo" href="../Admin/indiceAdmin.html">ElectroTECHZONE-Administrador</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -54,6 +54,23 @@
 <!-------- Titulo--------- -->
 <div class="contenedorT">
   <h1 class="text-center">Factura</h1>
+  <div class="ConteBuscador">
+      <div class="as">
+        <label class="Emple"> Codigo </label>
+        <input type="search" class="codigo" id="codigo" name="codigo">
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+      <div class="as">
+        <label class="Emple"> Producto </label>
+        <input type="search" class="producto" id="producto" name="producto">
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+      <div class="as">
+        <label class="Emple"> Monto</label>
+        <input type="search" class="monto" id="monto" name="monto">
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
   <div class="botones">
             <a href="../CRUDPROVEE/agregarFactura.php"class="btn btn-success  text-center ">Agregar Factura </a>
     </div>
@@ -89,13 +106,13 @@
         $idPago=$resultado['ID_PAGO_P'];
         
         echo "<tr>";
-        echo " <th scope='row'>$idFactura</th>";
+        echo " <th class=\"id\" scope='row'>$idFactura</th>";
         echo"<td>$idPago</td>";
-        echo"<td>$producto</td>";
-        echo"<td> S/ $monto</td>";
+        echo"<td class=\"article\" >$producto</td>";
+        echo"<td  class=\"m\" > S/ $monto</td>";
         echo"<td>$cantidad</td>";
         echo "<td>
-                    <a href='Formulario/editar.php?id=$idFactura' class=\"btn btn-warning custom-link \"><i class='fas fa-edit'></i> </a>
+                    <a href='../CRUDPROVEE/editarFactura.php?id=$idFactura' class=\"btn btn-warning custom-link \"><i class='fas fa-edit'></i> </a>
                     <br>
                     <br>
                     <a href='../CRUDPROVEE/eliminarFactura.php?ID_FACTURA_P=$idFactura'class=\"btn btn-danger custom-link\"><i class='fas fa-trash'></i></a>
@@ -184,8 +201,45 @@
         text-align: center;
       }
 
- </style>
+      .filtro {
+      display: none;
+    }
+    .ConteBuscador {
+      display: grid;
+      grid-template-columns:  34% 33% 33%;
+      color: black;
+      font-weight: 400;      
+      margin: 0;
+      
+     
+    }
+    .ConteBuscador input{
+      margin-left: 10px;
+      border: 1px solid lightgray;
+      border-radius: 7px;
 
+    }
+    .ConteBuscador .as{
+      padding: 15px 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .as a{
+      background-color: #dc582a;
+      color: white;
+      margin-left: 2px;
+      padding: 6px 13px;
+      border-radius: 9px;
+    }
+    .as i{
+      font-size: 12px;
+    }
+
+ </style>
+   <script src="../Javascrip/buscadorFactura.js"> </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -12,7 +12,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
     $stmt = mysqli_prepare($conexion,$sql);
     mysqli_stmt_bind_param($stmt,"sssss", $idpago, $idfactura, $producto, $cantidad, $monto  );
     if (mysqli_stmt_execute($stmt)) {
-        header("location:../Proveedor/factura.php");
+        echo '<script>';
+        echo 'alert("Factura registrado correctamente.");';
+        echo 'window.location.href = "../Proveedor/factura.php";';
+        echo '</script>';
+        
 
     } else{
         echo "ERROR AL INSERTAR DATOS " . mysqli_error($conexion);

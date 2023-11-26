@@ -42,7 +42,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_stmt_bind_param($stmt, "ssssissssss", $nombref, $nombre, $descripcion, $precio, $stock, $marca, $pagiPrin, $imagenP, $imagenP2, $imagenP3, $imagenP4);
 
         if (mysqli_stmt_execute($stmt)) {
-            header("location:../Admin/listarProductoAdmin.php");
+            echo '<script>';
+            echo 'alert("Producto registrado correctamente.");';
+            echo 'window.location.href = "../Admin/listarProductoAdmin.php";';
+            echo '</script>';
+            
         } else {
             echo "Error al insertar datos: " . mysqli_error($conexion);
         }

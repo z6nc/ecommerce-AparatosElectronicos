@@ -13,7 +13,9 @@ include ("../config/conexion.php");
 </head>
 <body>
     
-
+<?php
+  include("../cabeza/cabeza.html");
+  ?>
 
 
     <section >

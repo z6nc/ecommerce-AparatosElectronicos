@@ -6,6 +6,7 @@ include ("../config/conexion.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
     <title>Productos</title>
 </head>
@@ -26,7 +27,7 @@ include ("../config/conexion.php");
                             <!--ACA FALTAL AÑADIR DETALLES DE PRODUCTOS. buscar solucion-->
                             <p class="card-text">S/.<?php echo $resultado["PRECIO"]; ?></p>
                             
-                        <button type="submit" class="btn btn-primary"  onclick=" envia_carrito($('#ref<?php echo $resultado['ID_PRODUCTO']; ?>').val(),$('#titulo<?php echo $resultado['ID_PRODUCTO']; ?>').val(),$('#precio<?php echo $resultado['ID_PRODUCTO']; ?>').val(),$('#cantidad<?php echo $resultado['ID_PRODUCTO']; ?>').val());">Añadir Carrito</button>
+                        <button type="submit" class="btn btn-primary"  onclick=" envia_carrito($('#ref<?php echo $resultado['ID_PRODUCTO']; ?>').val(),$('#titulo<?php echo $resultado['ID_PRODUCTO']; ?>').val(),$('#precio<?php echo $resultado['ID_PRODUCTO']; ?>').val(),$('#cantidad<?php echo $resultado['ID_PRODUCTO']; ?>').val());">Añadir Carrito <i class="fas fa-shopping-cart"></i> </button>
                             <!--No afecta para el uso-->         <input name="ref" type="hidden" id="ref<?php echo $resultado["ID_PRODUCTO"]; ?>" value="<?php echo $resultado["ID_PRODUCTO"]; ?>" />                           
                         <input name="precio" type="hidden" id="precio<?php echo $resultado["ID_PRODUCTO"]; ?>" value="<?php echo $resultado["PRECIO"]; ?>" />
                         <input name="titulo" type="hidden" id="titulo<?php echo $resultado["ID_PRODUCTO"]; ?>" value="<?php echo $resultado["N_PRODUCTO"]; ?>" />
@@ -58,10 +59,11 @@ include ("../config/conexion.php");
        border: 1px solid lightgray;
        border-radius: 7px;
         margin: 15px 55px;
+        background-color: white;
       }
       .container a{
        text-decoration: none;
-       color: #4e5eab;
+       color: #1078ff;
        font-size: 16px;
        letter-spacing: 2px;
 
@@ -71,17 +73,24 @@ include ("../config/conexion.php");
       }
       .container button{
         cursor: pointer;
-        padding: 13px 123px;
+        padding: 10px 32px;
+        border-radius: 9px;
         border: none;
-        color: #4e5eab;
+        color: whitesmoke;
+        background-color: #0455bd;
         font-weight: 900;
-        border: 1px  solid lightgray;
+       border: none;
         white-space: nowrap;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        
+        
+        
       }
       .container button:hover{
-        background-color: #4e5eab;
+        background-color: #1078ff;
         color: whitesmoke;
-        border: 1px  solid lightgray;
+        box-shadow: 0px 0px 10px black;
        
       }
       .container p{

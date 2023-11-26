@@ -11,7 +11,9 @@ include ("../config/conexion.php");
     <title>ELECTROTECHZONE</title>
 </head>
 <body>
-    
+    <?php 
+      include ("casa.html");
+    ?>
 
 
     <main  >

@@ -7,21 +7,85 @@ include ("../config/conexion.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
     <title>Productos</title>
 </head>
 <body>
-    
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid ">
+    <a class="navbar-brand"  style="color: black; padding: 23px 40px;" href="../paginas/inicio.php">ELECTROTECHZONE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav "   >
+        <li class="nav-item" >
+          <a class="nav-link " style="color: black; letter-spacing: 2px;"  aria-current="page" href="#">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: black;letter-spacing: 2px;" href="#">PRODUCTOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: black;letter-spacing: 2px;" href="#">ACERCA DE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " style="color: black;letter-spacing: 2px;" aria-disabled="true">CONTACTO <i class="fab fa-whatsapp"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <br>
+  <br>
+    <h1>Productos</h1>
+    <br>
+   <br>
+    <div id="proveedoresCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-between align-items-center">
+                    <img src="../imagenes/apple.png" class="d-block" alt="Razer" style="max-height: 50px;">
+                    <img src="../imagenes/razer.png" class="d-block" alt="LG" style="max-height: 50px;">
+                    <img src="../imagenes/samsung.png" class="d-block" alt="Samsung" style="max-height: 50px;">
+                    <img src="../imagenes/logite.png" class="d-block" alt="Apple" style="max-height: 50px;">
+                    <img src="../imagenes/asus.png" class="d-block" alt="Logitech" style="max-height: 50px;">
+                    <img src="../imagenes/msi.png" class="d-block" alt="Asus" style="max-height: 50px;">
+                    <!-- Agrega más logos aquí según sea necesario -->
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <img src="../imagenes/acer.png" class="d-block" alt="Apple" style="max-height: 50px;">
+                    <img src="../imagenes/zowii.png" class="d-block" alt="Logitech" style="max-height: 50px;">
+                    <img src="../imagenes/lenovo.png" class="d-block" alt="Asus" style="max-height: 50px;">
+                    <img src="../imagenes/alcatel.png" class="d-block" alt="Apple" style="max-height: 50px;">
+                    <img src="../imagenes/reddragon.png" class="d-block" alt="Logitech" style="max-height: 50px;">
+                    <img src="../imagenes/amazon.png" class="d-block" alt="Asus" style="max-height: 50px;">
+                    <!-- Agrega más logos aquí según sea necesario -->
+                </div>
+            </div>
+            <!-- Agrega más elementos carousel-item según sea necesario -->
+        </div>
+        <a class="carousel-control-prev" href="#proveedoresCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#proveedoresCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
 
-
-
+    <br>
     <section >
             <?php 
             $buscardor=mysqli_query($conexion,"SELECT * FROM producto "); 
             while($resultado = mysqli_fetch_assoc($buscardor)){ 
                ?>
-               <div class="container" data-aos="zoom-in-up">
+               <div class="container1" data-aos="zoom-in-up">
                         <a href="#"><img src="data:image/jpeg;base64,<?php echo base64_encode($resultado['IMG']); ?>" alt="" class="card-img-top" height="200px" wigth="100px"></a>
                         
                             <h5  class="card-title"><a href="detalles.php?id=<?php echo $resultado["ID_PRODUCTO"]; ?>"><?php echo $resultado["N_PRODUCTO"]; ?></a></h5>
@@ -40,6 +104,12 @@ include ("../config/conexion.php");
               <?php } ?>
               
     </section>
+
+
+
+    <?php
+  include("../cabeza/footer.html");
+  ?>
     <style>
       body {
         margin: 0;
@@ -50,30 +120,31 @@ include ("../config/conexion.php");
 
       section {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3px;
       }
 
-      section .container {
+      section .container1 {
         text-align: center;
         border: 1px solid lightgray;
         border-radius: 7px;
-        margin: 20px 30px;
+        margin: 20px 50px;
         background-color: white;
+       
       }
 
-      .container a {
+      .container1 a {
         text-decoration: none;
         color: #1078ff;
         font-size: 16px;
         letter-spacing: 2px;
       }
 
-      section .container:hover {
+      section .container1:hover {
         box-shadow: 1px 2px 10px gray;
       }
 
-      .container button {
+      .container1 button {
         cursor: pointer;
         padding: 10px 32px;
         border-radius: 9px;
@@ -86,21 +157,41 @@ include ("../config/conexion.php");
         margin-bottom: 12px;
       }
 
-      .container button:hover {
+      .container1 button:hover {
         background-color: #1078ff;
         color: whitesmoke;
         box-shadow: 0px 0px 10px black;
       }
 
-      .container p {
+      .container1 p {
         color: black;     
         letter-spacing: 1px;
       }
 
-      .container img {
+      .container1 img {
         padding-top: 10px;
-        max-width: 100%;
+        max-width: 70%;
         height: auto;
+       
+      }
+      nav{
+        background-color:whitesmoke;
+       
+        text-align: center;
+        padding: 20px 100px;
+       
+       
+      }
+      nav a{
+        color: white;
+      }
+      
+      h1{
+        text-align: center;
+        font-weight: 900;
+        color: #0455bd;
+        font-size: 45px;
+        letter-spacing: 2px;
       }
 
       @media screen and (max-width: 767px) {
@@ -110,8 +201,11 @@ include ("../config/conexion.php");
       }
      
     </style>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
   <script>
     AOS.init();
   </script>

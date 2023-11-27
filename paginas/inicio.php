@@ -8,9 +8,11 @@ include("../config/conexion.php");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
   <script src="https://maps.googleapis.com/maps/api/js"></script>
 
   <title>ELECTROTECHZONE</title>
@@ -79,6 +81,44 @@ include("../config/conexion.php");
       <div class="Espacio"></div>
     </div>
   </div>
+
+  <div id="proveedoresCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-between align-items-center">
+                    <img src="../imagenes/apple.png" class="d-block" alt="Razer" style="max-height: 60px;">
+                    <img src="../imagenes/razer.png" class="d-block" alt="LG" style="max-height: 60px;">
+                    <img src="../imagenes/samsung.png" class="d-block" alt="Samsung" style="max-height: 60px;">
+                    <img src="../imagenes/logite.png" class="d-block" alt="Apple" style="max-height: 60px;">
+                    <img src="../imagenes/asus.png" class="d-block" alt="Logitech" style="max-height: 60px;">
+                    <img src="../imagenes/msi.png" class="d-block" alt="Asus" style="max-height: 60px;">
+                    <!-- Agrega más logos aquí según sea necesario -->
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <img src="../imagenes/acer.png" class="d-block" alt="Apple" style="max-height: 50px;">
+                    <img src="../imagenes/zowii.png" class="d-block" alt="Logitech" style="max-height: 50px;">
+                    <img src="../imagenes/lenovo.png" class="d-block" alt="Asus" style="max-height: 50px;">
+                    <img src="../imagenes/alcatel.png" class="d-block" alt="Apple" style="max-height: 50px;">
+                    <img src="../imagenes/reddragon.png" class="d-block" alt="Logitech" style="max-height: 50px;">
+                    <img src="../imagenes/amazon.png" class="d-block" alt="Asus" style="max-height: 50px;">
+                    <!-- Agrega más logos aquí según sea necesario -->
+                </div>
+            </div>
+            <!-- Agrega más elementos carousel-item según sea necesario -->
+        </div>
+        <a class="carousel-control-prev" href="#proveedoresCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#proveedoresCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+    <br>
+    <br>
 
   <section>
     <div class="f">
@@ -219,10 +259,10 @@ include("../config/conexion.php");
   window.onload = mostrarMapa;
 </script>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 
 </body>
 

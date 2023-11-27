@@ -1,3 +1,7 @@
+<?php
+Include("../../config/conexion.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +25,7 @@
          <img src="img/bg.svg">
       </div>
       <div class="login-content">
-         <form method="post" action="">
+        <form action="../Controlador/control_regis_usuario.php" method="POST" class="formulario">
             <img src="img/avatar.svg">
             <h2 class="title">BIENVENIDO</h2>
             <div class="input-div one">
@@ -47,7 +51,6 @@
             </div>
 
             <div class="text-center">
-               <a class="font-italic isai5" href="">Olvidé mi contraseña</a>
                <a class="font-italic isai5" href="">Registrarse</a>
             </div>
             <input name="btningresar" class="btn" type="submit" value="INICIAR SESION">

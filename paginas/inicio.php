@@ -83,78 +83,8 @@ include("../config/conexion.php");
   </div>
   <br>
   
-  <div id="proveedoresCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="d-flex justify-content-between align-items-center">
-                    <img src="../imagenes/apple.png" class="d-block" alt="Razer" style="max-height: 80px;">
-                    <img src="../imagenes/razer.png" class="d-block" alt="LG" style="max-height: 80px;">
-                    <img src="../imagenes/samsung.png" class="d-block" alt="Samsung" style="max-height: 80px;">
-                    <img src="../imagenes/logite.png" class="d-block" alt="Apple" style="max-height: 80px;">
-                    <img src="../imagenes/asus.png" class="d-block" alt="Logitech" style="max-height: 80px;">
-                    <img src="../imagenes/msi.png" class="d-block" alt="Asus" style="max-height: 80px;">
-                    <!-- Agrega más logos aquí según sea necesario -->
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="d-flex justify-content-between align-items-center">
-                    <img src="../imagenes/acer.png" class="d-block" alt="Apple" style="max-height: 80px;">
-                    <img src="../imagenes/zowii.png" class="d-block" alt="Logitech" style="max-height: 80px;">
-                    <img src="../imagenes/lenovo.png" class="d-block" alt="Asus" style="max-height: 80px;">
-                    <img src="../imagenes/alcatel.png" class="d-block" alt="Apple" style="max-height: 80px;">
-                    <img src="../imagenes/reddragon.png" class="d-block" alt="Logitech" style="max-height: 80px;">
-                    <img src="../imagenes/amazon.png" class="d-block" alt="Asus" style="max-height: 80px;">
-                    <!-- Agrega más logos aquí según sea necesario -->
-                </div>
-            </div>
-            <!-- Agrega más elementos carousel-item según sea necesario -->
-        </div>
-        <a class="carousel-control-prev" href="#proveedoresCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#proveedoresCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-        </a>
-    </div>
-    <br>
-    <br>
-    <br>
 
-  <section>
-    <div class="f">
-      <img src="../imagenes/principal1.png" alt="">
-    </div>
-    <div class="f">
-      <img src="../imagenes/principal2.png" alt="">
-    </div>
-    <div class="f">
-      <img src="../imagenes/principal3.png" alt="">
-    </div>
-  </section>
-
-  <aside>
-    <div>
-    <img src="../imagenes/principal4.png" alt="s">
-    </div>
-    <div>
-    <img src="../imagenes/principal5.png" alt="s">
-    </div>
-    <div>
-    <img src="../imagenes/principal6.png" alt="">
-    </div>
-    <div>
-    <img src="../imagenes/principal7.png" alt="">
-    </div>
-  </aside>
-
-  <br>
-  <br>
-  <div class="mapas">
-    <h2>Ubicanos</h2>
-  <div id="mapa" style="height: 400px; margin: 40px 20px;"></div>
-  </div>
+  
   
 
 
@@ -241,27 +171,9 @@ include("../config/conexion.php");
     }
   </style>
   
-  <script>
-  function mostrarMapa() {
-    var ubicacion = { lat: -12.0431800, lng:  -77.0282400 }; // Cambia las coordenadas con las de tu ubicación
+  
 
-    var mapa = new google.maps.Map(document.getElementById('mapa'), {
-      zoom: 18, // Ajusta el nivel de zoom según tus necesidades
-      center: ubicacion
-    });
 
-    var marcador = new google.maps.Marker({
-      position: ubicacion,
-      map: mapa,
-      title: ' tu empresa'
-    });
-  }
-
-  // Llama a la función cuando la página haya cargado
-  window.onload = mostrarMapa;
-</script>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   

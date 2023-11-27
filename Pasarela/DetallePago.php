@@ -14,9 +14,7 @@ include ("../config/conexion.php");
 <body>
     
 
-    <?php 
-    include ("../cabeza/cabeza.html");
-    ?>
+
 
     <main>
         <h4 style="text-align: center; ">Detalles de Pago</h4>

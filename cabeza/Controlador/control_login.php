@@ -29,7 +29,7 @@ if (!empty($_POST["btningresar"])) {
         }
 
 
-        $stmt = $conexion->prepare("INSERT INTO cliente(DNI, NOMBRE, APELLIDO, DIRECCION, CELULAR, EMAIL, PASSWORD) VALUES(?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conexion->prepare("select * from cliente where EMAIL='$email' and PASSWORD='$contraseña'");
         $stmt->bind_param("sssssss", $email, $contraseña);
 
 
@@ -37,7 +37,6 @@ if (!empty($_POST["btningresar"])) {
      
 
         if ($resultado) {
-            echo '<div class="success">Usuario registrado correctamente</div>';
             header("location: ../../paginas/inicio.php");
         } else {
             echo '<div class="alerta">Acceso denegado</div>';

@@ -81,28 +81,29 @@ include("../config/conexion.php");
       <div class="Espacio"></div>
     </div>
   </div>
-
+  <br>
+  
   <div id="proveedoresCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="d-flex justify-content-between align-items-center">
-                    <img src="../imagenes/apple.png" class="d-block" alt="Razer" style="max-height: 60px;">
-                    <img src="../imagenes/razer.png" class="d-block" alt="LG" style="max-height: 60px;">
-                    <img src="../imagenes/samsung.png" class="d-block" alt="Samsung" style="max-height: 60px;">
-                    <img src="../imagenes/logite.png" class="d-block" alt="Apple" style="max-height: 60px;">
-                    <img src="../imagenes/asus.png" class="d-block" alt="Logitech" style="max-height: 60px;">
-                    <img src="../imagenes/msi.png" class="d-block" alt="Asus" style="max-height: 60px;">
+                    <img src="../imagenes/apple.png" class="d-block" alt="Razer" style="max-height: 80px;">
+                    <img src="../imagenes/razer.png" class="d-block" alt="LG" style="max-height: 80px;">
+                    <img src="../imagenes/samsung.png" class="d-block" alt="Samsung" style="max-height: 80px;">
+                    <img src="../imagenes/logite.png" class="d-block" alt="Apple" style="max-height: 80px;">
+                    <img src="../imagenes/asus.png" class="d-block" alt="Logitech" style="max-height: 80px;">
+                    <img src="../imagenes/msi.png" class="d-block" alt="Asus" style="max-height: 80px;">
                     <!-- Agrega más logos aquí según sea necesario -->
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="d-flex justify-content-between align-items-center">
-                    <img src="../imagenes/acer.png" class="d-block" alt="Apple" style="max-height: 50px;">
-                    <img src="../imagenes/zowii.png" class="d-block" alt="Logitech" style="max-height: 50px;">
-                    <img src="../imagenes/lenovo.png" class="d-block" alt="Asus" style="max-height: 50px;">
-                    <img src="../imagenes/alcatel.png" class="d-block" alt="Apple" style="max-height: 50px;">
-                    <img src="../imagenes/reddragon.png" class="d-block" alt="Logitech" style="max-height: 50px;">
-                    <img src="../imagenes/amazon.png" class="d-block" alt="Asus" style="max-height: 50px;">
+                    <img src="../imagenes/acer.png" class="d-block" alt="Apple" style="max-height: 80px;">
+                    <img src="../imagenes/zowii.png" class="d-block" alt="Logitech" style="max-height: 80px;">
+                    <img src="../imagenes/lenovo.png" class="d-block" alt="Asus" style="max-height: 80px;">
+                    <img src="../imagenes/alcatel.png" class="d-block" alt="Apple" style="max-height: 80px;">
+                    <img src="../imagenes/reddragon.png" class="d-block" alt="Logitech" style="max-height: 80px;">
+                    <img src="../imagenes/amazon.png" class="d-block" alt="Asus" style="max-height: 80px;">
                     <!-- Agrega más logos aquí según sea necesario -->
                 </div>
             </div>
@@ -117,6 +118,7 @@ include("../config/conexion.php");
             <span class="sr-only">Siguiente</span>
         </a>
     </div>
+    <br>
     <br>
     <br>
 

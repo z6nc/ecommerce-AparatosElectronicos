@@ -16,23 +16,23 @@ include ("../config/conexion.php");
 <body>
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid ">
-    <a class="navbar-brand"  style="color: white; padding: 23px 20px; font-weight: bold; font-size: 26px;" href="../paginas/inicio.php">ELECTROTECHZONE</a>
+    <a class="navbar-brand"  style="color: black; padding: 23px 40px;" href="../paginas/inicio.php">ELECTROTECHZONE</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse " id="navbarNav">
       <ul class="navbar-nav "   >
         <li class="nav-item" >
-          <a class="nav-link " style="color: white;"  aria-current="page" href="#">Inicio</a>
+          <a class="nav-link " style="color: black; letter-spacing: 2px;"  aria-current="page" href="#">INICIO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: white;" href="#">Productos</a>
+          <a class="nav-link" style="color: black;letter-spacing: 2px;" href="#">PRODUCTOS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: white;" href="#">Acerca de</a>
+          <a class="nav-link" style="color: black;letter-spacing: 2px;" href="#">ACERCA DE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " style="color: white;" aria-disabled="true">Contacto <i class="fab fa-whatsapp"></i></a>
+          <a class="nav-link " style="color: black;letter-spacing: 2px;" aria-disabled="true">CONTACTO <i class="fab fa-whatsapp"></i></a>
         </li>
       </ul>
     </div>
@@ -120,7 +120,7 @@ include ("../config/conexion.php");
 
       section {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 3px;
       }
 
@@ -175,8 +175,8 @@ include ("../config/conexion.php");
        
       }
       nav{
-        background-color: #054da9;
-        font-size: 18px;
+        background-color:whitesmoke;
+       
         text-align: center;
         padding: 20px 100px;
        

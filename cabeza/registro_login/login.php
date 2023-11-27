@@ -19,14 +19,14 @@ Include("../../config/conexion.php");
 </head>
 
 <body>
-   <img class="wave" src="img/wave.png">
+   <img class="wave" src="../cabeza/images/wave.png">
    <div class="container">
       <div class="img">
-         <img src="img/bg.svg">
+         <img src="../cabeza/images/bg.svg">
       </div>
       <div class="login-content">
         <form action="../Controlador/control_regis_usuario.php" method="GET" class="formulario">
-            <img src="img/avatar.svg">
+            <img src="">
             <h2 class="title">BIENVENIDO</h2>
             <div class="input-div one">
                <div class="i">

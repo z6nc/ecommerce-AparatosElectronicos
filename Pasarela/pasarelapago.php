@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <script src="https://www.paypal.com/sdk/js?client-id=Adgp5SYO1WVGdjqrX6Jo15Gda5-OCe9IrESiRrmOkFOQJNwnAxTcprngqFHpXloHbHLTo04rM0lnsigT&currency=USD"></script>
 </head>
 <body>

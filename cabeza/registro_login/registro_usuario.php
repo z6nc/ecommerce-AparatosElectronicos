@@ -46,7 +46,7 @@
                 </div>
                 <div class= "cuenta">
                     <input class="boton" type="submit" value="Registrar" name="registro">
-                    <a href=""></a>
+                    <a href="../cabeza"></a>
                 </div>
             </div>
         </form>

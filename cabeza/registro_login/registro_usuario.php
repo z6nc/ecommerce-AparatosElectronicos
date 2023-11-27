@@ -1,6 +1,5 @@
 <?php
             include("../../config/conexion.php");
-
             ?>
 
 <!DOCTYPE html> 
@@ -13,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="../Controlador/control_regis_usuario.php" method="POST" class="formulario">
+        <form action="" method="POST" class="formulario">
             <h2 class="titulo">REGISTRARSE</h2>           
             <div class="padre">
                 <div class="DNI">
@@ -46,7 +45,7 @@
                 </div>
                 <div class= "cuenta">
                     <input class="boton" type="submit" value="Registrar" name="registro">
-                    <a href="../cabeza"></a>
+                    <a href=""></a>
                 </div>
             </div>
         </form>

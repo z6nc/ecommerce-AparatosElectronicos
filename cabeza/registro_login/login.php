@@ -25,7 +25,7 @@ Include("../../config/conexion.php");
          <img src="img/bg.svg">
       </div>
       <div class="login-content">
-        <form action="../Controlador/control_regis_usuario.php" method="POST" class="formulario">
+        <form action="../Controlador/control_regis_usuario.php" method="GET" class="formulario">
             <img src="img/avatar.svg">
             <h2 class="title">BIENVENIDO</h2>
             <div class="input-div one">

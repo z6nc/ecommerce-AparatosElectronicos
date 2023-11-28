@@ -56,7 +56,7 @@ Include("../../config/conexion.php");
             </div>
 
             <div class="text-center">
-               <a class="font-italic isai5" href="">Registrarse</a>
+               <a class="font-italic isai5" href="registro_usuario.php">Registrarse</a>
             </div>
             <input name="btningresar" class="btn" type="submit" value="INICIAR SESION">
          </form>

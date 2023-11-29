@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
     <!-- Enlace a Bootstrap CSS (desde un CDN) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Tu propio CSS personalizado (si es necesario) -->
     <style>
         body {
-            padding-top: 56px; /* Altura de la barra de navegación */
+            padding-top: 56px;
+            font-family: 'Montserrat', sans-serif;
         }
     </style>
 </head>
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg   fixed-top">
-        <a class="navbar-brand" href="#">Dashboard</a>
+        <a class="navbar-brand" href="../Admin/dasboardAdmin.php">ElectroTECHZONE-Dashboard</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,11 +38,6 @@
         </div>
     </nav>
 
-  <main>
-
-    
-  </main>
-    
            
 
             

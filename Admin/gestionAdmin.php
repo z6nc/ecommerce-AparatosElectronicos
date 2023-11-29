@@ -20,20 +20,46 @@ $conexion->close();
     <title>Dashboard de Productos por Marca</title>
     <!-- Agrega la biblioteca Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Agrega cualquier otro estilo o librería de gráficos que desees usar -->
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    
     <style>
-        #chart-container {
-            width: 80%;
-            margin: auto;
-            height: 400px; 
+        body{
+            font-family: 'Montserrat', sans-serif;
+            background-color: whitesmoke;
         }
+        #chart-container {
+            width: 70%;
+            height: 500px; 
+        }
+        
+        .grafico {
+            margin-top: 30px;
+            box-shadow: 1px 2px 10px gray;
+            border-radius: 9px;
+          margin-left: 17%;
+           
+        }
+
+        .grafico h1{
+         margin-top: 15px;
+         font-weight: 900;
+         font-size: 36px;
+         letter-spacing: 1px;
+        }
+        canvas{
+            margin-bottom:90px ;
+        }
+       
     </style>
 </head>
 <body>
-    <!-- Aquí puedes diseñar tu interfaz -->
-    <div id="chart-container">
-        <h1 style="text-align: center;">Dashboard de Productos por Marca</h1>
-        <canvas id="myChart"></canvas>
+   <?php
+   include('../Admin/navbarDasboard.php');
+   ?>
+    <div class="grafico" id="chart-container">
+        <h1 style="text-align: center;">Productos por Marca</h1>
+        <canvas  id="myChart"></canvas>
     </div>
 
     <!-- Agrega el script de Chart.js para visualizar los datos -->
@@ -64,7 +90,13 @@ $conexion->close();
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false
+                maintainAspectRatio: false,
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                    
+                }
+                
             }
         });
     </script>

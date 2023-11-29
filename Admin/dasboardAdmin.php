@@ -21,7 +21,7 @@ $rows = $resulta->fetch_assoc();
 $totalingresos = $rows['total_ingresos'];
 
 
-$quers = "SELECT SUM(STOCK) as total_stock FROM producto";
+$quers = "SELECT COUNT(DISTINCT N_PRODUCTO) as total_stock FROM producto";
 $resultas = $conexion->query($quers);
 
 // Procesa los datos
@@ -48,6 +48,7 @@ $conexion->close();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Enlace a Bootstrap CSS (desde un CDN) -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -60,7 +61,7 @@ $conexion->close();
   <?php
   include('../Admin/navbarDasboard.php');
   ?>
-  <main>
+  <main data-aos="zoom-in-up">
     <h1>Dashboard</h1>
     
     <br>
@@ -86,7 +87,7 @@ $conexion->close();
 
   </main>
   <br>
-  <section>
+  <section data-aos="zoom-in-up">
   <div class="info3">
     <div class="cambio">
     <p>Registro de Compras Diarias</p> 
@@ -103,7 +104,7 @@ $conexion->close();
        
   </section>
 
-  <div class="grid">
+  <div class="grid" data-aos="zoom-in-up">
   <div class="info6">
       <h4>Stock de productos</h4>
           <p>Total de Productos: <?php echo number_format($Stock, 0); ?> Productos</p>
@@ -380,7 +381,10 @@ $conexion->close();
 
 
 
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 
   <!-- Enlace a Bootstrap JS (desde un CDN) -->

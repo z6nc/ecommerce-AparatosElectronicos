@@ -3,7 +3,8 @@
 include("../config/conexion.php");
 
 // Consulta SQL para obtener el stock de cada producto
-$consulta = "SELECT N_PRODUCTO, STOCK FROM producto";
+$consulta = "SELECT N_PRODUCTO, STOCK FROM producto   ORDER BY
+STOCK DESC;";
 $resultado = $conexion->query($consulta);
 
 // Verifica si la consulta fue exitosa

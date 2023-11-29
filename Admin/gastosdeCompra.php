@@ -59,7 +59,7 @@ while ($row = $result->fetch_assoc()) {
            data: {
                labels: <?php echo json_encode($labels); ?>,
                datasets: [{
-                   label: 'Monto Total',
+                   label: 'MONTO TOTAL',
                    data: <?php echo json_encode($montos); ?>,
                    backgroundColor: 'rgba(255, 165, 0, 0.3)',
                    borderColor: 'rgba(255, 165, 0, 1)',

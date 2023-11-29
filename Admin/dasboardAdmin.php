@@ -104,13 +104,15 @@ $conexion->close();
   </section>
 
   <div class="grid">
-      <div>
-       <h4>sadas</h4>
+  <div class="info6">
+      <h4>Stock de productos</h4>
+          <p>Total de Productos: <?php echo number_format($Stock, 0); ?> Productos</p>
+          <a href="../Admin/stockProducto.php">Ver Detalle</a>
       </div>
       <div class="info6">
-      <h4>Stock de productos</h4>
-          <p>Total de Productos: <?php echo number_format($Stock, 0); ?></p>
-          <a href="../Admin/stockProducto.php">Ver Detalle</a>
+      <h4>Clientes que Han Realizado Compras</h4>
+          <p>Total de clientes compradores : <?php echo number_format($clientes, 0); ?> Clientes</p>
+          <a href="../Admin/clientesCompra.php">Ver Detalle</a>
       </div>
   </div>
 
@@ -339,6 +341,7 @@ $conexion->close();
       border-radius: 10px;
       padding-left: 20px;
       padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     .grid .info6:hover{

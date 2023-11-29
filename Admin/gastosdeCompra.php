@@ -2,7 +2,7 @@
 include ("../config/conexion.php");
 
 // Obtener datos de la base de datos
-$query = "SELECT PRODUCTO_P, MONTO_TOTAL FROM factura_proveedor ORDER BY MONTO_TOTAL DESC LIMIT 5";
+$query = "SELECT PRODUCTO_P, MONTO_TOTAL FROM factura_proveedor ORDER BY MONTO_TOTAL DESC LIMIT 14";
 $result = $conexion->query($query);
 
 // Procesar datos para el gráfico

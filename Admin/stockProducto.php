@@ -1,24 +1,23 @@
 <?php
-// Realiza la conexión a la base de datos (ajusta los valores según tu configuración)
-include ("../config/conexion.php");
+// Asegúrate de que la ruta del archivo de conexión sea correcta
+include("../config/conexion.php");
 
-// Consulta SQL para obtener la cantidad vendida de cada producto
-$consulta = "SELECT producto.N_PRODUCTO, SUM(boleto_compra.CANTIDAD) as total_vendido
-             FROM boleto_compra
-             INNER JOIN producto ON boleto_compra.ID_PRODUCTO = producto.ID_PRODUCTO
-             GROUP BY boleto_compra.ID_PRODUCTO
-             ORDER BY total_vendido DESC
-             LIMIT 12";
-
+// Consulta SQL para obtener el stock de cada producto
+$consulta = "SELECT N_PRODUCTO, STOCK FROM producto";
 $resultado = $conexion->query($consulta);
 
+// Verifica si la consulta fue exitosa
+if (!$resultado) {
+    die("Error en la consulta: " . $conexion->error);
+}
+
 // Obtén los datos para el gráfico
-$labels = [];
-$data = [];
+$productos = [];
+$stock = [];
 
 while ($fila = $resultado->fetch_assoc()) {
-    $labels[] = $fila['N_PRODUCTO'];
-    $data[] = $fila['total_vendido'];
+    $productos[] = $fila['N_PRODUCTO'];
+    $stock[] = $fila['STOCK'];
 }
 
 // Cierra la conexión a la base de datos
@@ -29,20 +28,24 @@ $conexion->close();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Gráfico de Producto más Vendido</title>
+    <title>Gráfico de Stock de Productos</title>
     <!-- Incluye la biblioteca de Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-         #chart-container {
-         width: 68%; /* Puedes ajustar este valor según tus necesidades */
-         height: auto;
-         box-shadow: 1px 2px 10px gray;
+        #chart-container {
+         width: 70%; /* Puedes ajustar este valor según tus necesidades */
+         height: 500px;
+         
+      }
+      .graficos {
+        box-shadow: 1px 2px 10px gray;
          margin-left: 18%;
+         margin-top: 40px;
          padding-left: 10px;
          padding-right: 10px;
-      }
-      
-      
+         padding-bottom: 100px;
+        }
+
 
         .graficos h1{
          margin-top: 15px;
@@ -58,29 +61,29 @@ $conexion->close();
    ?>
     <!-- Contenedor del gráfico -->
     <div class="graficos" id="chart-container">
-    <h1 style="text-align: center;">Productos mas Vendidos</h1>
+        <h1 style="text-align: center;">Productos mas Vendidos</h1>
         <canvas id="grafico"></canvas>
     </div>
 
     <script>
         // Datos para el gráfico
-        var labels = <?php echo json_encode($labels); ?>;
-        var data = <?php echo json_encode($data); ?>;
+        var productos = <?php echo json_encode($productos); ?>;
+        var stock = <?php echo json_encode($stock); ?>;
 
         // Configuración del gráfico
         var config = {
             type: 'bar',
             data: {
-                labels: labels,
+                labels: productos,
                 datasets: [{
-                    label: 'PRODUCTOS VENDIDOS',
-                    data: data,
-                    backgroundColor: 'rgba(0, 121, 0, 0.5)',
-                    borderColor: 'rgba(0, 121, 0, 2)',
-                    borderWidth: 1
+                    label: 'STOCK PRODUCTOS',
+                    data: stock,
+                    backgroundColor: 'rgba(75, 192, 192, 0.7)',
                 }]
             },
             options: {
+                responsive: true,
+                maintainAspectRatio: false,
                 scales: {
                     y: {
                         beginAtZero: true

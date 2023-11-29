@@ -20,6 +20,23 @@ $resulta = $conexion->query($querys);
 $rows = $resulta->fetch_assoc();
 $totalingresos = $rows['total_ingresos'];
 
+
+$quers = "SELECT SUM(STOCK) as total_stock FROM producto";
+$resultas = $conexion->query($quers);
+
+// Procesa los datos
+$rowss = $resultas->fetch_assoc();
+$Stock = $rowss['total_stock'];
+
+
+$querw = "SELECT COUNT(DISTINCT ID_CLIENTE) AS total_nombres_clientes FROM compra;";
+$resultasa = $conexion->query($querw);
+
+// Procesa los datos
+$rowsss = $resultasa->fetch_assoc();
+$clientes = $rowsss['total_nombres_clientes'];
+
+
 $conexion->close();
 ?>
 
@@ -85,6 +102,17 @@ $conexion->close();
         </div>
        
   </section>
+
+  <div class="grid">
+      <div>
+       <h4>sadas</h4>
+      </div>
+      <div class="info6">
+      <h4>Stock de productos</h4>
+          <p>Total de Productos: <?php echo number_format($Stock, 0); ?></p>
+          <a href="../Admin/stockProducto.php">Ver Detalle</a>
+      </div>
+  </div>
 
 
   <style>
@@ -153,7 +181,6 @@ $conexion->close();
       padding: 9px 25px;
       text-decoration: none;
       color: white;
-       box-shadow: 1px 2px 10px black;
       font-weight: 900;
     }
     .info a:hover{
@@ -213,7 +240,7 @@ $conexion->close();
       gap: 14px;
       margin-left: 40px;
       margin-right: 40px;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
   
     section .info3{
@@ -298,6 +325,53 @@ $conexion->close();
       letter-spacing: 1px;
       background-color: orangered;
     }
+    .grid{
+      display: grid;
+      grid-template-columns: 50% 50% ;
+      gap: 14px;
+      margin-left: 40px;
+      margin-right: 40px;
+      background-color: white;
+      margin-bottom: 40px;
+    }
+    .grid .info6{
+      border: 1px solid #babebe;
+      border-radius: 10px;
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+
+    .grid .info6:hover{
+      box-shadow: 1px 2px 10px gray;
+    }
+
+
+    .info6 h4{
+      font-size: 25px;
+      letter-spacing: 1px;
+      color: #555;
+    }
+    .info6 p{
+      letter-spacing: 2px;
+      font-size: 19px;
+      padding-top: 8px;
+      padding-bottom: 10px;
+    }
+    .info6 a{
+      background-color: #dc582a;
+      border-radius: 5px;
+      padding: 7px 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .info6 a:hover{
+      background-color:orangered;
+      letter-spacing: 1px;
+    }
+
   </style>
 
 

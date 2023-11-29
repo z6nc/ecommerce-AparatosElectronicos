@@ -44,8 +44,8 @@ $conexion->close();
   include('../Admin/navbarDasboard.php');
   ?>
   <main>
-    <h1>Contenido Principal</h1>
-    <h4>Administrador</h4>
+    <h1>Dashboard</h1>
+    
     <br>
     <div class="admin">
       <div class="info">
@@ -67,19 +67,24 @@ $conexion->close();
         </div>
       </div>
 
-      <div class="info">
-        <p>Estado de Entrega de Productos</p>
-        <img src="../imagenes/graficoCircular.png" alt="" srcset="">
-        <a href="../Admin/estadodeProductos.php">Ver Detalle</a>
-      </div>
-      <div class="info">
-        <p>Registro de Compras Diarias</p>
-        <img src="../imagenes/graficoCircular.png" alt="" srcset="">
-        <a href="../Admin/fechaVentas.php">Ver Detalle</a>
-      </div>
-    </div>
-
   </main>
+  <br>
+  <section>
+  <div class="info3">
+    <div class="cambio">
+    <p>Registro de Compras Diarias</p> 
+          <a href="../Admin/fechaVentas.php">Ver Detalle</a>
+    </div>
+          <img src="../imagenes/fecha.png" alt="" srcset="">
+         
+        </div>
+    <div class="info4">
+          <p>Estado de Entrega de Productos</p>
+          <img src="../imagenes/pendiente.png" alt="" srcset="">
+          <a href="../Admin/estadodeProductos.php">Ver Detalle</a>
+        </div>
+       
+  </section>
 
 
   <style>
@@ -90,10 +95,22 @@ $conexion->close();
       background-color: #f3f4f6;
     }
 
+    main h1{
+      padding: 20px 30px;
+       font-weight: 900;
+       letter-spacing: 2px;
+       text-align: center;
+       font-size: 45px;
+       background-color: white;
+       margin-left: 100px;
+       margin-right: 100px;
+       
+    }
+
     .admin {
       display: grid;
       grid-template-columns: 40% 60% ;
-      gap: 10px;
+      gap: 14px;
       margin-left: 40px;
       margin-right: 40px;
 
@@ -146,7 +163,7 @@ $conexion->close();
 
     .admin .pagos{
       display: grid;
-      grid-template-rows: 1f 1fr;
+      grid-template-rows: 1fr 1fr;
       gap: 20px;
       background-color: white;
       
@@ -189,7 +206,98 @@ $conexion->close();
       background-color:orangered;
       letter-spacing: 1px;
     }
+
+    section{
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 14px;
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-bottom: 50px;
+    }
   
+    section .info3{
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #babebe;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      background-color: white;
+    }
+    
+    section .info3:hover {
+      box-shadow: 1px 2px 10px gray;
+    }
+    .info3 p {
+      padding-top: 36px;
+      color: #555;
+      padding-left: 2px;
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
+    .info3 img{
+      width: 80%;
+    }
+   .cambio{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+   }
+    .info3 a {
+      background-color: #dc582a;
+      border-radius: 5px;
+      margin-left: 20px;
+      padding: 9px 25px;
+      text-decoration: none;
+      color: white;
+      font-weight: 900;
+    }
+    .info3 a:hover{
+      letter-spacing: 1px;
+      background-color: orangered;
+    }
+
+    section .info4{
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #babebe;
+      align-items: center;
+      border-radius: 12px;
+      background-color: white;
+    }
+    section .info4:hover {
+      box-shadow: 1px 2px 10px gray;
+    }
+
+    .info4 p {
+      padding-top: 36px;
+      color: #555;
+      padding-left: 30px;
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
+    .info4 img{
+      width: 35%;
+      border-radius: 50%;
+     
+    }
+
+    .info4 a {
+      background-color: #dc582a;
+      border-radius: 5px;
+      margin-left: 17px;
+      margin-top: 27px;
+      padding: 9px 25px;
+      text-decoration: none;
+      color: white;
+      font-weight: 900;
+    }
+    .info4 a:hover{
+      letter-spacing: 1px;
+      background-color: orangered;
+    }
   </style>
 
 

@@ -81,6 +81,7 @@
         <th scope="col">ID FACTURA</th>
         <th scope="col">ID PAGO</th>
         <th scope="col">PRODUCTO</th>
+        <th scope="col">PRECIOUNITARIO</th>
         <th scope="col">MONTO TOTAL</th>
         <th scope="col">CANTIDAD</th>
         <th scope="col">ACCIONES</th>
@@ -92,7 +93,7 @@
     <tbody>
       <?php
        include("../config/conexion.php");
-       $sql=$conexion->query("SELECT   factura_proveedor.ID_FACTURA_P  , factura_proveedor.PRODUCTO_P ,factura_proveedor.MONTO_TOTAL ,factura_proveedor.CANTIDAD , pago_proveedor.ID_PAGO_P
+       $sql=$conexion->query("SELECT   factura_proveedor.ID_FACTURA_P  , factura_proveedor.PRODUCTO_P,factura_proveedor.PRECIO_F ,factura_proveedor.MONTO_TOTAL ,factura_proveedor.CANTIDAD , pago_proveedor.ID_PAGO_P
        FROM factura_proveedor 
        INNER JOIN pago_proveedor ON factura_proveedor.ID_PAGO_P = pago_proveedor.ID_PAGO_P");
 
@@ -101,6 +102,7 @@
        while ($resultado=$sql->fetch_assoc()) {
         $idFactura=$resultado['ID_FACTURA_P'];
         $producto=$resultado['PRODUCTO_P'];
+        $precioF=$resultado['PRECIO_F'];
         $monto=$resultado['MONTO_TOTAL'];
         $cantidad=$resultado['CANTIDAD'];
         $idPago=$resultado['ID_PAGO_P'];
@@ -109,6 +111,7 @@
         echo " <th class=\"id\" scope='row'>$idFactura</th>";
         echo"<td>$idPago</td>";
         echo"<td class=\"article\" >$producto</td>";
+        echo"<td class=\"article\"> S/ $precioF</td>";
         echo"<td  class=\"m\" > S/ $monto</td>";
         echo"<td>$cantidad</td>";
         echo "<td>

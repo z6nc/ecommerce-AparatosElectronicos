@@ -9,13 +9,11 @@ Include("../../config/conexion.php");
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<<<<<<< HEAD
+
    <link rel="stylesheet" href="../css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="../css/style.css">
-=======
-   <link rel="stylesheet" href="css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="login.css">
->>>>>>> 64de4f5f578ea326bcfce505f7e49cfd9ce2b9f2
+
    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
    <!-- <link rel="stylesheet" href="css/all.min.css"> -->
    <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
@@ -24,10 +22,10 @@ Include("../../config/conexion.php");
 </head>
 
 <body>
-   <img class="wave" src="../cabeza/images/wave.png">
+   <img class="wave" src="../../cabeza/images/wave.png">
    <div class="container">
       <div class="img">
-         <img src="../cabeza/images/bg.svg">
+         <img src="../../cabeza/images/bg.svg">
       </div>
       <div class="login-content">
         <form action="../Controlador/control_regis_usuario.php" method="GET" class="formulario">

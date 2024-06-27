@@ -7,11 +7,6 @@
     $idProducto = $_POST["idProducto"];
     $stockP = $_POST["stockP"];
    
-
-
-
-   
-  
     $stockP = intval($stockP);
    
     

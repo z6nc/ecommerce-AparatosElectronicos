@@ -9,12 +9,7 @@
     <!-- Enlace a Bootstrap CSS (desde un CDN) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Tu propio CSS personalizado (si es necesario) -->
-    <style>
-        body {
-            padding-top: 56px;
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
+   
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -38,14 +33,14 @@
         </div>
     </nav>
 
-           
-
-            
-
 
     <style>
+         body {
+            padding-top: 56px;
+            font-family: 'Montserrat', sans-serif;
+        }
         nav{
-           background-color: #dc582a;
+          background-color: #dc582a;
         }
         nav a{
             color: white;
